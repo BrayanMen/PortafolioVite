@@ -1,0 +1,18 @@
+#root {
+  text-align: center;
+}
+
+.goToTopButton {
+  background-color: #007bff81;
+  color: white;
+  border: none;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  align-items: flex-end;
+  position: sticky;
+}
+
+.goToTopButton:hover {
+  background-color: #0057b3;
+}
