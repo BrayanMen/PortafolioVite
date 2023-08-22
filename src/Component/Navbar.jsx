@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import styles from './Navbar.module.scss';
 import { Link, useLocation } from 'react-router-dom';
+import ToggleIcon from '../assets/Images/toggleIcon';
 
-function Navbar() {
+function Navbar({activeSection}) {
   const [menuActive, setMenuActive] = useState(false);
-  const location = useLocation();
+  // const location = useLocation();
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
@@ -17,15 +18,15 @@ function Navbar() {
   return (
     <nav className={`${styles.navbar}`}>
       <div className={styles.logo}></div>
-      <button className={styles.menuToggle} onClick={toggleMenu}>
-        {!menuActive ? 'Menu' : 'Close'}
+      <button className={`${styles.menuToggle} ${menuActive ? styles['menu-closed'] : ''}`} onClick={toggleMenu}>
+        {!menuActive ? <ToggleIcon/> : `Cerrar`}
       </button>
       <ul className={`${styles.navList} ${menuActive ? styles.active : ''}`}>
         <li className={styles.navItem}>
           <Link
             to="/"
             className={`${styles.navLink} ${
-              location.pathname === '/' ? styles.active : ''
+              activeSection === 'home' ? styles.active : ''
             }`} onClick={() => closeMenu()}
           >
             Inicio
@@ -35,7 +36,7 @@ function Navbar() {
           <Link
             to="/about-me"
             className={`${styles.navLink} ${
-              location.pathname === '/about-me' ? styles.active : ''
+              activeSection === 'about-me' ? styles.active : ''
             }`}  onClick={() => closeMenu()}
           >
             Sobre Mí
@@ -45,7 +46,7 @@ function Navbar() {
           <Link
             to="/projects"
             className={`${styles.navLink} ${
-              location.pathname === '/projects' ? styles.active : ''
+              activeSection === 'projects' ? styles.active : ''
             }`}  onClick={() => closeMenu()}
           >
             Proyectos
@@ -55,7 +56,7 @@ function Navbar() {
           <Link
             to="/skills"
             className={`${styles.navLink} ${
-              location.pathname === '/skills' ? styles.active : ''
+              activeSection === 'skills' ? styles.active : ''
             }`}  onClick={() => closeMenu()}
           >
             Habilidades
@@ -65,7 +66,7 @@ function Navbar() {
           <Link
             to="/experience"
             className={`${styles.navLink} ${
-              location.pathname === '/experience' ? styles.active : ''
+              activeSection === 'experience' ? styles.active : ''
             }`}  onClick={() => closeMenu()}
           >
             Experiencia
@@ -75,7 +76,7 @@ function Navbar() {
           <Link
             to="/contact"
             className={`${styles.navLink} ${
-              location.pathname === '/contact' ? styles.active : ''
+              activeSection === 'contact' ? styles.active : ''
             }`}  onClick={() => closeMenu()}
           >
             Contacto

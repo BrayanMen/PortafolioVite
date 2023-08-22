@@ -4,7 +4,7 @@ const ParticleConfig = {
     "color": {
       "value": "#7676764d",
     },
-    "position": "50% 50%",
+    "position": "absolute",
     "repeat": "no-repeat",
     "size": "20%",
   },

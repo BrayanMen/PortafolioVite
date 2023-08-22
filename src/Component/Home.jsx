@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import ParticleBackground from '../assets/ParticleBackground';
 import styles from './Home.module.scss';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import picture1 from '../assets/Images/pic.png'
+import download from '../assets/Images/Icons/download.png'
+import cv from '../assets/CV.pdf'
 
-export default function Home() {
+export default function Home({setActiveSection}) {
   const [devRotate, setDevRotate] = useState(0);
   const location = useLocation();
+
+  useEffect(() => {
+    setActiveSection('home'); 
+  }, [setActiveSection]);
 
   useEffect(() => {
     const rotate = setInterval(() => {
@@ -22,8 +29,7 @@ export default function Home() {
   ];
   return (
     <>
-      <section id='home'>
-          <ParticleBackground/>
+      <section id='home' className={styles.home}>
         <div className={styles.divIzq}>
           <div className={styles.titleIzq}>
           <h1>Brayan Mendoza</h1>
@@ -34,8 +40,24 @@ export default function Home() {
               </span>
             ))}
             </h2>
-            <button>Portafolio</button>
             </div>
+            <div className={styles.btnH}>
+            <button className={styles.btnSecond}>
+              <a href={cv} download>CV <img src={download} alt='download' width={'30px'}>
+              </img></a>
+              </button>
+            <button className={styles.btnThird}>
+              <Link to='/contact'>Contáctame</Link>
+              </button>
+            </div>
+        </div>
+            <ParticleBackground/>
+        <div className={styles.divDer}>
+          <div>
+            <img className={styles.imgPic}
+            src={picture1} 
+            alt="pic" />
+          </div>
         </div>
       </section>
     </>
