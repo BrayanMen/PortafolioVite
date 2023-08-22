@@ -3,6 +3,39 @@ import styles from './Navbar.module.scss';
 import { Link, useLocation } from 'react-router-dom';
 import ToggleIcon from '../assets/Images/toggleIcon';
 
+const navItems = [
+  {
+    id: 1,
+    name: '',
+    title: 'Inicio',
+  },
+  {
+    id: 2,
+    name: 'about-me',
+    title: 'Sobre mi',
+  },
+  {
+    id: 3,
+    name: 'skills',
+    title: 'Habilidades',
+  },
+  {
+    id: 4,
+    name: 'projects',
+    title: 'Proyectos',
+  },
+  {
+    id: 5,
+    name: 'experience',
+    title: 'Experiencia',
+  },
+  {
+    id: 6,
+    name: 'contact',
+    title: 'Contacto',
+  },
+];
+
 function Navbar({activeSection}) {
   const [menuActive, setMenuActive] = useState(false);
   // const location = useLocation();
@@ -22,66 +55,20 @@ function Navbar({activeSection}) {
         {!menuActive ? <ToggleIcon/> : `Cerrar`}
       </button>
       <ul className={`${styles.navList} ${menuActive ? styles.active : ''}`}>
-        <li className={styles.navItem}>
-          <Link
-            to="/"
+      {navItems.map(({ id, name, title }) => (
+          <li
+            key={id}
+            className={styles.navItem}>
+            <Link 
+            to={name}
             className={`${styles.navLink} ${
-              activeSection === 'home' ? styles.active : ''
-            }`} onClick={() => closeMenu()}
-          >
-            Inicio
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link
-            to="/about-me"
-            className={`${styles.navLink} ${
-              activeSection === 'about-me' ? styles.active : ''
-            }`}  onClick={() => closeMenu()}
-          >
-            Sobre Mí
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link
-            to="/projects"
-            className={`${styles.navLink} ${
-              activeSection === 'projects' ? styles.active : ''
-            }`}  onClick={() => closeMenu()}
-          >
-            Proyectos
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link
-            to="/skills"
-            className={`${styles.navLink} ${
-              activeSection === 'skills' ? styles.active : ''
-            }`}  onClick={() => closeMenu()}
-          >
-            Habilidades
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link
-            to="/experience"
-            className={`${styles.navLink} ${
-              activeSection === 'experience' ? styles.active : ''
-            }`}  onClick={() => closeMenu()}
-          >
-            Experiencia
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link
-            to="/contact"
-            className={`${styles.navLink} ${
-              activeSection === 'contact' ? styles.active : ''
-            }`}  onClick={() => closeMenu()}
-          >
-            Contacto
-          </Link>
-        </li>
+              activeSection === `${name}` ? styles.active : ''
+            }`}
+            onClick={() => closeMenu()}>
+              {title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

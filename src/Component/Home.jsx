@@ -11,7 +11,7 @@ export default function Home({setActiveSection}) {
   const location = useLocation();
 
   useEffect(() => {
-    setActiveSection('home'); 
+    setActiveSection(''); 
   }, [setActiveSection]);
 
   useEffect(() => {

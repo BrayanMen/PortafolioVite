@@ -1,15 +1,24 @@
 .home {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  align-content: center;
   margin: 0px 50px 0px 50px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  @media (max-width: 1000px){
+    justify-content: space-around;
+    margin: 0;
+    margin-top: -100px;
+    align-items: center;
+  }
 }
 
 .divIzq {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
   position: absolute;
   text-align: left;
   flex-wrap: wrap;
@@ -17,8 +26,7 @@
 
   @media (max-width: 1000px) {
     display: flex;
-    width: 95%;
-    height: 100vh;
+    width: 95%;   
     justify-content: center;
     position: absolute;
   }
@@ -27,15 +35,16 @@
 .divDer {
   float: right;
   position: relative;
-  width: -100%;
   z-index: -1;
+  margin-right: 140px;
 
   @media (max-width: 1000px) {
     position: relative;
     margin-top: -100px;
+    margin-right: 0;
     z-index: -1;
     width: 140%;
-    height: 50vh;
+    height: 70vh;
   }
 }
 
@@ -93,41 +102,28 @@
   }
 }
 
-.btnHome {
+.btnH {
   margin-top: -30px;
   margin-left: 20px;
   display: inline-block;
   justify-content: center;
   width: max-content;
   font-size: 30px;
-  border-radius: 8px;
-  border: 1px solid #e0dcdc;
-  padding: 6px;
-  background-color: transparent;
   font-weight: 500;
   font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  color: #e0dcdc;
   transform: translateY(100%);
   animation: slideInAnimation 2s forwards;
-
-  &:hover {
-    border-color: #1f3493;
-    background-color: #e0dcdc;
-    color: #1f3493;
   }
 
 @media (max-width: 1000px) {
-  .btnHome {
-    width: 120px;
+  .btnH {
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
   }
 }
-}
 .btnSecond {
-  margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
   display: inline-block;
   justify-content: center;
   width: max-content;
@@ -155,16 +151,10 @@
     }
   }
 }
-@media (max-width: 1000px){
-  .btnH{
-    display: flex;
-    flex-direction: column;
-  }
-}
 
 .btnThird{
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
   display: inline-block;
   justify-content: center;
   width: max-content;
@@ -172,7 +162,6 @@
   border-radius: 8px;
   border: 1px solid #1f3493;
   padding: 6px;
-  background-color: transparent;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
