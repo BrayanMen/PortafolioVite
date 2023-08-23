@@ -10,6 +10,9 @@ export default function AboutMe({setActiveSection}) {
 
   return (
     <section className={styles.aboutContainer} id="about-me">
+      <div>
+        <img></img>
+      </div>
       <div className={styles.divAbout}>
         <h1 className="titleAbout">Sobre mi:</h1>
         <p className="pAbput">

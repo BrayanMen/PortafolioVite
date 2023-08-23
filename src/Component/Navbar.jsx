@@ -44,7 +44,7 @@ function Navbar({activeSection}) {
     setMenuActive(!menuActive);
   };
 
-  const closeMenu = (sectionId) => {
+  const closeMenu = () => {
     setMenuActive(false);
   };
 
