@@ -1,28 +1,58 @@
+// .skills{
+  
+// }
 .skillsContainer{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-end;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;    
     width: 100%;
     height: 100vh;
-    background-color: #7676764d;
-    margin: 0;
 }
 
-.skillsDiv{
-    justify-content: center;
+ .skillsDiv{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     align-items: center;
-    text-align: center;
-    position: relative;
+    justify-content: center;
+   
 }
 
-.spline{
-    position: absolute;
-    width: 50%;
-    align-content: flex-start;
-    height: 100vh;
-
-
+.nameSkill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    font-weight: 600;
+    font-size: 18px;
 }
+
+.teal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    border-radius: 50%;   
+    height: 80px;
+    background: conic-gradient(#fdfa54 0% 60%, #303238 60% 100%);
+}
+.circleInner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #d1cfcf;
+}
+
+.html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    border-radius: 50%;   
+    height: 80px;
+    background: conic-gradient(#f38f0d 0% 60%, #303238 60% 100%);
+}
+
+
