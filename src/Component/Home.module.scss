@@ -126,6 +126,7 @@
   margin-left: 10px;
   display: inline-block;
   justify-content: center;
+  align-items: center;
   width: max-content;
   font-size: 30px;
   border-radius: 8px;
@@ -140,14 +141,13 @@
   transform: translateY(100%);
   animation: slideInAnimation 2s forwards;  
   &:hover {
-    border-color: #1f3493;
-    background-color: #e0dcdc;
-    color: #1f3493;
+    border:3px solid #e0dcdc;
+    background-color: #e0dcdc4b;
   }
   a{
     color: #e0dcdc;
     &:hover:link:any-link{
-    color: #1f3493;
+    color: #e0dcdc;
     }
   }
 }
@@ -167,14 +167,20 @@
   cursor: pointer;
   transition: border-color 0.25s;
   color: #1f3493;
-  background-color: #e0dcdc;
+  background-color: #e0dcdc91;
   transform: translateY(100%);
   animation: slideInAnimation 2s forwards;  
+  a{
+    color: #1f3493;
+    &:hover{
+    color: #e0dcdc;
+    }
+  }
 }
 .btnThird:hover {
-  border-color: #e0dcdc;
+  border:3px solid #e0dcdc;
   color: #e0dcdc;
-  background-color: #1f3493;
+  background-color: #1f349391;
 }
 
 
