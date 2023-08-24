@@ -19,15 +19,29 @@ export default function AboutMe({ setActiveSection }) {
     const calculated = birthdayOccurred ? diff : diff - 1;
     setAge(calculated);
 
-    const programmingStartDate = new Date(2021, 11, 15); 
-      const timeDiff = Math.abs(date - programmingStartDate);
-      const yearsProgrammed = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365.25));
-      setProgramming(yearsProgrammed);
+    const programmingStartDate = new Date(2021, 11, 15);
+    const timeDiff = Math.abs(date - programmingStartDate);
+    const year = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365.25));
+    const month = Math.floor(
+      (timeDiff % (1000 * 60 * 60 * 24 * 365.25)) /
+        (1000 * 60 * 60 * 24 * 30.44)
+    );
+    const day = Math.floor(
+      ((timeDiff % (1000 * 60 * 60 * 24 * 365.25)) %
+        (1000 * 60 * 60 * 24 * 30.44)) /
+        (1000 * 60 * 60 * 24)
+    );
+
+    setProgramming(
+      `${year} ${year > 1 ? 'años' : 'año'}, ${month} ${
+        month > 1 ? 'meses' : 'mes'
+      } y ${day} ${day > 1 ? 'días' : 'dia'}`
+    );
   };
 
   useEffect(() => {
     setActiveSection('about-me');
-    
+
     calculateAge();
     const interval = setInterval(() => {
       calculateAge();
@@ -54,7 +68,8 @@ export default function AboutMe({ setActiveSection }) {
         </p>
         <ul className={styles.aboutList}>
           <li className={styles.aboutItem}>
-            <strong>Edad: </strong>{age}
+            <strong>Edad: </strong>
+            {age}
           </li>
           <li className={styles.aboutItem}>
             <strong>Telefono:</strong> +54 9 11 2730 0038
@@ -70,7 +85,8 @@ export default function AboutMe({ setActiveSection }) {
             <strong>Direccion:</strong> Buenos Aires, Avellaneda.
           </li>
           <li className={styles.aboutItem}>
-            <strong>Tiempo Programando: </strong>{programming}
+            <strong>Tiempo Programando: </strong>
+            {programming}
           </li>
         </ul>
       </div>
