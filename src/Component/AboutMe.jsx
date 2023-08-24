@@ -72,21 +72,21 @@ export default function AboutMe({ setActiveSection }) {
             {age}
           </li>
           <li className={styles.aboutItem}>
-            <strong>Telefono:</strong> +54 9 11 2730 0038
+            <strong>Tiempo Programando: </strong>
+            {programming}
           </li>
           <li className={styles.aboutItem}>
-            <strong>Residencia:</strong> Argentina
-          </li>
-          <li className={styles.aboutItem}>
-            <strong>E-mail:</strong>
-            <a> brayanjmr880@gmail.com</a>
+            <strong>Residencia:</strong> Argentina.
           </li>
           <li className={styles.aboutItem}>
             <strong>Direccion:</strong> Buenos Aires, Avellaneda.
           </li>
           <li className={styles.aboutItem}>
-            <strong>Tiempo Programando: </strong>
-            {programming}
+            <strong>Telefono:</strong> +54 9 11 2730 0038
+          </li>
+          <li className={styles.aboutItem}>
+            <strong>E-mail:</strong>
+            <a href="mailto:brayanjmr880@gmail.com"> brayanjmr880@gmail.com</a>
           </li>
         </ul>
       </div>
