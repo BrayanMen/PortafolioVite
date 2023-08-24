@@ -39,7 +39,7 @@ export default function Skills({ setActiveSection }) {
                   <img className={styles.js} src={js} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              65%
             </div>
             <div className={`${styles.nameSkill}`}>
               HMTL5
@@ -52,7 +52,7 @@ export default function Skills({ setActiveSection }) {
             </div>
             <div className={`${styles.nameSkill}`}>
               CCS3
-              <div className={styles.teal}>
+              <div className={styles.css}>
                 <div className={styles.circleInner}>
                   <img src={css} alt="js" width={'50px'} />
                 </div>
@@ -61,148 +61,148 @@ export default function Skills({ setActiveSection }) {
             </div>
             <div className={`${styles.nameSkill}`}>
               React JS
-              <div className={styles.teal}>
+              <div className={styles.react}>
                 <div className={styles.circleInner}>
                   <img src={reactjs} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              65%
             </div>
 
             <div className={`${styles.nameSkill}`}>
               Redux
-              <div className={styles.teal}>
+              <div className={styles.redux}>
                 <div className={styles.circleInner}>
                   <img src={redux} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              50%
             </div>
             <div className={`${styles.nameSkill}`}>
               Ant-Design
-              <div className={styles.teal}>
+              <div className={styles.ant}>
                 <div className={styles.circleInner}>
                   <img src={antDesign} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              50%
             </div>
             <div className={`${styles.nameSkill}`}>
               Bootstrap
-              <div className={styles.teal}>
+              <div className={styles.boot}>
                 <div className={styles.circleInner}>
                   <img src={bootstrap} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              50%
             </div>
             <div className={`${styles.nameSkill}`}>
               SASS
-              <div className={styles.teal}>
+              <div className={styles.sass}>
                 <div className={styles.circleInner}>
                   <img src={sass} alt="sass" width={'50px'} />
                 </div>
               </div>
-              60%
+              70%
             </div>
             <div className={`${styles.nameSkill}`}>
               Node JS
-              <div className={styles.teal}>
+              <div className={styles.node}>
                 <div className={styles.circleInner}>
                   <img src={nodejs} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              65%
             </div>
             <div className={`${styles.nameSkill}`}>
               Express JS
-              <div className={styles.teal}>
+              <div className={styles.express}>
                 <div className={styles.circleInner}>
                   <img src={express} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              65%
             </div>
             <div className={`${styles.nameSkill}`}>
               Sequelize
-              <div className={styles.teal}>
+              <div className={styles.seque}>
                 <div className={styles.circleInner}>
                   <img src={sequelize} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              70%
             </div>
             <div className={`${styles.nameSkill}`}>
               MongoDB
-              <div className={styles.teal}>
+              <div className={styles.mongo}>
                 <div className={styles.circleInner}>
                   <img src={mongoDb} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              50%
             </div>
             <div className={`${styles.nameSkill}`}>
               Firebase
-              <div className={styles.teal}>
+              <div className={styles.fire}>
                 <div className={styles.circleInner}>
                   <img src={firebase} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              50%
             </div>
             <div className={`${styles.nameSkill}`}>
               PostgreSQL
-              <div className={styles.teal}>
+              <div className={styles.postgre}>
                 <div className={styles.circleInner}>
                   <img src={postgre} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              70%
             </div>
             <div className={`${styles.nameSkill}`}>
               Postman
-              <div className={styles.teal}>
+              <div className={styles.post}>
                 <div className={styles.circleInner}>
                   <img src={postman} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              80%
             </div>
             <div className={`${styles.nameSkill}`}>
               Google Cloud
-              <div className={styles.teal}>
+              <div className={styles.gc}>
                 <div className={styles.circleInner}>
                   <img src={googlecloud} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              50%
             </div>
             <div className={`${styles.nameSkill}`}>
               Wordpress
-              <div className={styles.teal}>
+              <div className={styles.wordpress}>
                 <div className={styles.circleInner}>
                   <img src={wordpress} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              55%
             </div>
             <div className={`${styles.nameSkill}`}>
               Git
-              <div className={styles.teal}>
+              <div className={styles.git}>
                 <div className={styles.circleInner}>
                   <img src={git} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              70%
             </div>
             <div className={`${styles.nameSkill}`}>
               Slack
-              <div className={styles.teal}>
+              <div className={styles.slack}>
                 <div className={styles.circleInner}>
                   <img src={slack} alt="js" width={'50px'} />
                 </div>
               </div>
-              60%
+              100%
             </div>
           </div>
         </div>
