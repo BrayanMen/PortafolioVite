@@ -19,7 +19,6 @@ import wordpress from '../assets/Images/Icons/wordpress.png';
 import sass from '../assets/Images/Icons/sass.png';
 import firebase from '../assets/Images/Icons/firebase.png';
 import slack from '../assets/Images/Icons/slack.png';
-import Spline from '@splinetool/react-spline';
 
 export default function Skills({ setActiveSection }) {
   useEffect(() => {
@@ -28,9 +27,9 @@ export default function Skills({ setActiveSection }) {
 
   return (
     <section id="#skills" className={styles.skills}>
-      <div className={styles.skillsContainer}>
-        <div className={styles.skillsDiv}>
-          <h1>Habilidades Técnicas:</h1>
+      <div className={styles.skillsDiv}>
+        <h1>Habilidades Técnicas:</h1>
+        <div className={styles.skillsContainer}>
           <div className={styles.skillsDiv}>
             <div className={`${styles.nameSkill}`}>
               Javascript
@@ -42,7 +41,7 @@ export default function Skills({ setActiveSection }) {
               65%
             </div>
             <div className={`${styles.nameSkill}`}>
-              HMTL5
+              HMTL
               <div className={styles.html}>
                 <div className={styles.circleInner}>
                   <img src={html} alt="js" width={'50px'} />
@@ -51,7 +50,7 @@ export default function Skills({ setActiveSection }) {
               60%
             </div>
             <div className={`${styles.nameSkill}`}>
-              CCS3
+              CSS
               <div className={styles.css}>
                 <div className={styles.circleInner}>
                   <img src={css} alt="js" width={'50px'} />
@@ -79,7 +78,7 @@ export default function Skills({ setActiveSection }) {
               50%
             </div>
             <div className={`${styles.nameSkill}`}>
-              Ant-Design
+              AntDesign
               <div className={styles.ant}>
                 <div className={styles.circleInner}>
                   <img src={antDesign} alt="js" width={'50px'} />
@@ -106,7 +105,7 @@ export default function Skills({ setActiveSection }) {
               70%
             </div>
             <div className={`${styles.nameSkill}`}>
-              Node JS
+              NodeJS
               <div className={styles.node}>
                 <div className={styles.circleInner}>
                   <img src={nodejs} alt="js" width={'50px'} />
@@ -115,7 +114,7 @@ export default function Skills({ setActiveSection }) {
               65%
             </div>
             <div className={`${styles.nameSkill}`}>
-              Express JS
+              ExpressJS
               <div className={styles.express}>
                 <div className={styles.circleInner}>
                   <img src={express} alt="js" width={'50px'} />
