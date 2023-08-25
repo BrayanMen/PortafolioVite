@@ -3,7 +3,6 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
@@ -20,25 +19,29 @@
 .skillsDiv {
   display: flex;
   text-align: center;
-  align-items: flex-end;
   margin: 0px 40px 0 40px;
   max-width: 100%;
   max-height: 250px;
   overflow-x: hidden;
-  @media (max-width: 750px) {
-    width: auto;
-  }
 }
+
 .skillsContainer {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   gap: 20px;
   padding: 20px;
   animation: scrollAnimation 20s linear infinite alternate;
-  filter: blur(1px);
   &:hover {
-    filter: none;
+    animation-play-state: paused;
+  }
+  @keyframes scrollAnimation {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% + 100vw));
+    }
   }
 }
 
@@ -131,7 +134,7 @@
   width: 600px;
   border-radius: 8px;
   padding: 10px;
-  margin: 10px;
+  margin: 10px ;
   background-color: #f4f4f480;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.555);
   font-weight: 500;
@@ -146,14 +149,6 @@
   }
 }
 
-@keyframes scrollAnimation {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-100% + 100vw));
-  }
-}
 
 .nameSkill {
   display: flex;

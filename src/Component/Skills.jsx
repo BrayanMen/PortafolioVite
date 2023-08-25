@@ -40,11 +40,11 @@ export default function Skills({ setActiveSection }) {
 
   return (
     <section id="#skills" className={styles.skills}>
-        <h1 className={styles.h1Skill}>Stack Tech:</h1>
+      <h1 className={styles.h1Skill}>Stack Tech:</h1>
       <div>
-        <div className={styles.skillsDiv}>
-          <div className={styles.skillsContainer}>
-            <div className={styles.skillsDiv}>
+        <div>
+          <div className={styles.skillsDiv}>
+            <div className={styles.skillsContainer}>
               <div className={`${styles.nameSkill}`}>
                 Javascript
                 <div className={styles.teal}>
@@ -225,18 +225,16 @@ export default function Skills({ setActiveSection }) {
           </div>
         </div>
       </div>
-      <br />
       <div>
         <div className={styles.softDiv}>
-        <h1>Soft Skill</h1>
-        <br />
+          <h1>Soft Skill:</h1>
+          <br />
           <ul className={styles.ulSkills}>
             {softSkills.map((skill, index) => (
               <li key={index} className={styles.liSkill}>
                 {skill}
                 <div className={styles.check}>
-                  <div className={styles.tick}>
-                  </div>
+                  <div className={styles.tick}></div>
                 </div>
               </li>
             ))}
