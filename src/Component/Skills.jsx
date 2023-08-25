@@ -27,8 +27,8 @@ export default function Skills({ setActiveSection }) {
 
   return (
     <section id="#skills" className={styles.skills}>
-      <div className={styles.skillsDiv}>
         <h1>Habilidades Técnicas:</h1>
+      <div className={styles.skillsDiv}>
         <div className={styles.skillsContainer}>
           <div className={styles.skillsDiv}>
             <div className={`${styles.nameSkill}`}>
