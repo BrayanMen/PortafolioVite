@@ -30,6 +30,7 @@ const softSkills = [
   'Gestión del tiempo',
   'Aprendizaje continuo',
   'Empatía',
+  'Autodidacta',
 ];
 
 export default function Skills({ setActiveSection }) {
