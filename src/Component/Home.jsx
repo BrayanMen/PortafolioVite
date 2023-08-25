@@ -54,7 +54,7 @@ export default function Home({setActiveSection}) {
         </div>
             <ParticleBackground/>
         <div className={styles.divDer}>
-          <div>
+          <div className={styles.triangulo} >
             <img className={styles.imgPic}
             src={picture1} 
             alt="pic" />

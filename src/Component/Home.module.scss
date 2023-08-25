@@ -23,7 +23,7 @@
   text-align: left;
   flex-wrap: wrap;
   float: left;
-
+  
   @media (max-width: 1000px) {
     display: flex;
     width: 95%;   
@@ -36,8 +36,8 @@
   float: right;
   position: relative;
   z-index: -1;
+  padding: 50px;
   margin-right: 140px;
-
   @media (max-width: 1000px) {
     position: relative;
     margin-top: -100px;
@@ -48,11 +48,13 @@
   }
 }
 
+.triangulo{
+  background: url('../assets/Images/triangulo.svg') center/1000px no-repeat;
+}
 .imgPic {
   bottom: 0;
   height: auto;
   width: 400px;
-  border-radius: 80px;
   @media (max-width: 500px) {
     filter: grayscale(70%);    
   }
