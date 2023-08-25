@@ -6,6 +6,7 @@ import picture1 from '../assets/Images/pic.png'
 import download from '../assets/Images/Icons/download.png'
 import cv from '../assets/CV.pdf'
 
+
 export default function Home({setActiveSection}) {
   const [devRotate, setDevRotate] = useState(0);
   const location = useLocation();
