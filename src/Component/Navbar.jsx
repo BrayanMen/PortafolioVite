@@ -6,32 +6,32 @@ import ToggleIcon from '../assets/Images/toggleIcon';
 const navItems = [
   {
     id: 1,
-    name: '',
+    name: '#',
     title: 'Inicio',
   },
   {
     id: 2,
-    name: 'about-me',
+    name: '#about-me',
     title: 'Sobre mi',
   },
   {
     id: 3,
-    name: 'skills',
+    name: '#skills',
     title: 'Habilidades',
   },
   {
     id: 4,
-    name: 'projects',
+    name: '#projects',
     title: 'Proyectos',
   },
   {
     id: 5,
-    name: 'experience',
+    name: '#experience',
     title: 'Experiencia',
   },
   {
     id: 6,
-    name: 'contact',
+    name: '#contact',
     title: 'Contacto',
   },
 ];
@@ -59,14 +59,14 @@ function Navbar({activeSection}) {
           <li
             key={id}
             className={styles.navItem}>
-            <Link 
-            to={name}
+            <a 
+            href={name}
             className={`${styles.navLink} ${
               activeSection === `${name}` ? styles.active : ''
             }`}
             onClick={() => closeMenu()}>
               {title}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

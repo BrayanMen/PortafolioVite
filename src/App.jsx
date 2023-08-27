@@ -20,14 +20,24 @@ function App() {
     <Router>
       <Navbar activeSection={activeSection}/>
       <div className="">
-        <Routes>
-          <Route path="/" element={<Home setActiveSection={setActiveSection}/>} />
-          <Route path="/about-me" element={<AboutMe setActiveSection={setActiveSection}/>} />
-          <Route path="/contact" element={<Contact setActiveSection={setActiveSection}/>} />
-          <Route path="/skills" element={<Skills setActiveSection={setActiveSection}/>} />
-          <Route path="/experience" element={<Experience setActiveSection={setActiveSection}/>} />
-          <Route path="/projects" element={<Projects setActiveSection={setActiveSection}/>} />
-        </Routes>
+      <section id="">
+        <Home setActiveSection={setActiveSection}/>
+    </section>
+    <section id="about-me">
+        <AboutMe setActiveSection={setActiveSection}/>
+    </section>
+    <section id="skills">
+        <Skills setActiveSection={setActiveSection}/>
+    </section>
+    <section id="projects">
+        <Projects setActiveSection={setActiveSection}/>
+    </section>
+    <section id="experience">
+        <Experience setActiveSection={setActiveSection}/>
+    </section>
+    <section id="contact">
+        <Contact setActiveSection={setActiveSection}/>
+    </section>
       </div>
     </Router>
   );

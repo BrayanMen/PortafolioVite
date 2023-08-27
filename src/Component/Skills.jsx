@@ -41,7 +41,8 @@ export default function Skills({ setActiveSection }) {
   return (
     <section id="#skills" className={styles.skills}>
       <h1 className={styles.h1Skill}>Stack Tech:</h1>
-      <div>
+      <div className={styles.skiDiv}>
+        <div>
         <div>
           <div className={styles.skillsDiv}>
             <div className={styles.skillsContainer}>
@@ -240,6 +241,7 @@ export default function Skills({ setActiveSection }) {
             ))}
           </ul>
         </div>
+      </div>
       </div>
     </section>
   );
