@@ -5,6 +5,6 @@ export default function Experience({setActiveSection}) {
         setActiveSection('experience'); 
       }, [setActiveSection]);
   return (
-    <div>Experience</div>
+    <div >Experience</div>
   )
 }

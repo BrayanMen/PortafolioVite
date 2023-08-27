@@ -11,17 +11,15 @@ export default function Home({setActiveSection}) {
   const [devRotate, setDevRotate] = useState(0);
   const location = useLocation();
 
+    
   useEffect(() => {
-    setActiveSection(''); 
-  }, [setActiveSection]);
-
-  useEffect(() => {
+     setActiveSection(''); 
     const rotate = setInterval(() => {
       setDevRotate((prevI) => (prevI + 1) % dev.length);
     }, 3000);
     
     return () => clearInterval(rotate);
-  }, []);
+  }, [setActiveSection]);
 
   const dev = [
     'Desarrollador Web',

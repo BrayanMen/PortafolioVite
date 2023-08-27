@@ -6,6 +6,6 @@ export default function Projects({setActiveSection}) {
       }, [setActiveSection]);
 
   return (
-    <div>Projects</div>
+    <div >Projects</div>
   )
 }

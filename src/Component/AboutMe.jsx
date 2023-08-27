@@ -38,7 +38,7 @@ export default function AboutMe({ setActiveSection }) {
       } y ${day} ${day > 1 ? 'días' : 'dia'}`
     );
   };
-
+  
   useEffect(() => {
     setActiveSection('about-me');
 
@@ -54,6 +54,7 @@ export default function AboutMe({ setActiveSection }) {
 
   return (
     <section className={styles.aboutContainer} id="about-me">
+      <div className={styles.divI}>
       <div>
         <img></img>
       </div>
@@ -89,6 +90,7 @@ export default function AboutMe({ setActiveSection }) {
             <a href="mailto:brayanjmr880@gmail.com"> brayanjmr880@gmail.com</a>
           </li>
         </ul>
+      </div>
       </div>
     </section>
   );
