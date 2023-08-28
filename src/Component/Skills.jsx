@@ -33,10 +33,8 @@ const softSkills = [
   'Autodidacta',
 ];
 
-export default function Skills({ setActiveSection }) {
-  useEffect(() => {
-    setActiveSection('skills');
-  }, [setActiveSection]);
+export default function Skills() {
+  ;
 
   return (
     <section id="#skills" className={styles.skills}>

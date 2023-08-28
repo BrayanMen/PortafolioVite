@@ -10,36 +10,32 @@ import Projects from './Component/Projects';
 import Experience from './Component/Experience';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('')
-
-
-  
   const handleGoTop = () => {
     window.scrollTo(0, 0);
   };
 
   return (
     <Router>
-      <Navbar activeSection={activeSection}/>
+      <Navbar/>
       <div className="">
-      <section id="">
-        <Home setActiveSection={setActiveSection}/>
-    </section>
-    <section id="about-me">
-        <AboutMe setActiveSection={setActiveSection}/>
-    </section>
-    <section id="skills">
-        <Skills setActiveSection={setActiveSection}/>
-    </section>
-    <section id="projects">
-        <Projects setActiveSection={setActiveSection}/>
-    </section>
-    <section id="experience">
-        <Experience setActiveSection={setActiveSection}/>
-    </section>
-    <section id="contact">
-        <Contact setActiveSection={setActiveSection}/>
-    </section>
+        <section id="">
+          <Home />
+        </section>
+        <section id="about-me">
+          <AboutMe />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
     </Router>
   );

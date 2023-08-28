@@ -36,9 +36,14 @@ const navItems = [
   },
 ];
 
-function Navbar({activeSection}) {
+function Navbar() {
   const [menuActive, setMenuActive] = useState(false);
   // const location = useLocation();
+  const [activeLink, setActiveLink] = useState(''); 
+
+  const handleNavLinkClick = (link) => {
+    setActiveLink(link);
+  };
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
@@ -62,9 +67,10 @@ function Navbar({activeSection}) {
             <a 
             href={`#${name}`}
             className={`${styles.navLink} ${
-              activeSection === `${name}` ? styles.active : ''
+             activeLink === `${name}` ? styles.active : ''
             }`}
-            onClick={() => closeMenu()}>
+            onClick={() => {closeMenu();
+             handleNavLinkClick(`${name}`)}}>
               {title}
             </a>
           </li>

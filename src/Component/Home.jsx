@@ -1,25 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import ParticleBackground from '../assets/ParticleBackground';
 import styles from './Home.module.scss';
-import { Link, useLocation } from 'react-router-dom';
 import picture1 from '../assets/Images/pic.png'
 import download from '../assets/Images/Icons/download.png'
 import cv from '../assets/CV.pdf'
 
 
-export default function Home({setActiveSection}) {
+export default function Home() {
   const [devRotate, setDevRotate] = useState(0);
-  const location = useLocation();
 
     
   useEffect(() => {
-     setActiveSection(''); 
     const rotate = setInterval(() => {
       setDevRotate((prevI) => (prevI + 1) % dev.length);
     }, 3000);
     
     return () => clearInterval(rotate);
-  }, [setActiveSection]);
+  }, []);
 
   const dev = [
     'Desarrollador Web',
@@ -46,7 +43,7 @@ export default function Home({setActiveSection}) {
               </img></a>
               </button>
             <button className={styles.btnThird}>
-              <Link to='/contact'>Contáctame</Link>
+              <a href='#contact'>Contáctame</a>
               </button>
             </div>
         </div>

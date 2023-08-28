@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
 
-export default function Experience({setActiveSection}) {
-    useEffect(() => {
-        setActiveSection('experience'); 
-      }, [setActiveSection]);
+export default function Experience() {
+  
   return (
     <div >Experience</div>
   )
