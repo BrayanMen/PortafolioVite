@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import styles from './Projects.module.scss';
 
 export default function Projects() {
-
-
   return (
-    <div >Projects</div>
-  )
+    <section id="projects" className={styles.projects}>
+      <div>Projects</div>
+    </section>
+  );
 }
