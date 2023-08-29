@@ -76,6 +76,11 @@ function Navbar() {
           </li>
         ))}
       </ul>
+      <div>
+        <a href='https://github.com/BrayanMen'></a>
+        <a></a>
+        <a></a>
+      </div>
     </nav>
   );
 }
