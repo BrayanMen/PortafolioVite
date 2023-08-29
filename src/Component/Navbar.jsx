@@ -78,9 +78,9 @@ function Navbar() {
           </li>
         ))}
       </ul>
-      <div>
-        <a href='https://github.com/BrayanMen'><img src={git} alt="git" width={'30px'} /></a>
-        <a><img src={linked} alt="Linkdn" width={'30px'}/></a>
+      <div className={`${styles.divNetwork} ${!menuActive ? `${styles.showMenu}` : ''}`}>
+        <a href='https://github.com/BrayanMen'><img src={git} alt="git" width={'40px'} /></a>
+        <a href='https://www.linkedin.com/in/brayan-mendoza-52625a160'><img src={linked} alt="Linkdn" width={'40px'}/></a>
         <a></a>
       </div>
     </nav>
