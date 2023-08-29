@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import styles from './Navbar.module.scss';
-import { Link, useLocation } from 'react-router-dom';
 import ToggleIcon from '../assets/Images/toggleIcon';
+import git from '../assets/Images/Icons/github.png';
+import linked from '../assets/Images/Icons/linkedin.png'
+// import { BsGithub } from 'react-icons/bs';
 
 const navItems = [
   {
@@ -77,8 +79,8 @@ function Navbar() {
         ))}
       </ul>
       <div>
-        <a href='https://github.com/BrayanMen'></a>
-        <a></a>
+        <a href='https://github.com/BrayanMen'><img src={git} alt="git" width={'30px'} /></a>
+        <a><img src={linked} alt="Linkdn" width={'30px'}/></a>
         <a></a>
       </div>
     </nav>
