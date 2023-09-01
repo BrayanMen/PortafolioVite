@@ -3,6 +3,7 @@ import styles from './Navbar.module.scss';
 import ToggleIcon from '../assets/Images/toggleIcon';
 import git from '../assets/Images/Icons/github.png';
 import linked from '../assets/Images/Icons/linkedin.png'
+import mail from '../assets/Images/Icons/mail.png'
 // import { BsGithub } from 'react-icons/bs';
 
 const navItems = [
@@ -81,7 +82,7 @@ function Navbar() {
       <div className={`${styles.divNetwork} ${!menuActive ? `${styles.showMenu}` : ''}`}>
         <a href='https://github.com/BrayanMen'><img src={git} alt="git" width={'40px'} /></a>
         <a href='https://www.linkedin.com/in/brayan-mendoza-52625a160'><img src={linked} alt="Linkdn" width={'40px'}/></a>
-        <a></a>
+        <a><img src={mail} alt="Mail" width={'30px'}/></a>
       </div>
     </nav>
   );
