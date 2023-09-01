@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Navbar.module.scss';
 import ToggleIcon from '../assets/Images/toggleIcon';
-import git from '../assets/Images/Icons/github.png';
+import git from '../assets/Images/Icons/github-fill.png';
 import linked from '../assets/Images/Icons/linkedin.png'
 import mail from '../assets/Images/Icons/mail.png'
 // import { BsGithub } from 'react-icons/bs';
