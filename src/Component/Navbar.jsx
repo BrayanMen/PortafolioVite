@@ -82,7 +82,7 @@ function Navbar() {
       <div className={`${styles.divNetwork} ${!menuActive ? `${styles.showMenu}` : ''}`}>
         <a href='https://github.com/BrayanMen'><img src={git} alt="git" width={'40px'} /></a>
         <a href='https://www.linkedin.com/in/brayan-mendoza-52625a160'><img src={linked} alt="Linkdn" width={'40px'}/></a>
-        <a><img src={mail} alt="Mail" width={'30px'}/></a>
+        <a href="mailto:brayanjmr880@gmail.com"><img src={mail} alt="Mail" width={'30px'}/></a>
       </div>
     </nav>
   );
