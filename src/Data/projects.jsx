@@ -13,7 +13,7 @@ import clima from '../assets/Images/WeatherApp.png';
 import todo from '../assets/Images/todo.png';
 
 
-const projectsData = [
+export const projectsData = [
   {
     title: 'Museo Patagonico de Ciencias Naturales "Juan Carlos Salgado"',
     summary: "Este proyecto inicialmente concebido como el proyecto final para el Bootcamp Henry, se ha convertido en una implementación real para el Museo de Ciencias Naturales de Río Negro. La plataforma cuenta con una amplia gama de funcionalidades que incluyen una página de eventos, una pasarela de pago, un panel de control tanto para administradores como para usuarios, una base de datos sólida, filtros avanzados, y muchas otras características. Este ambicioso proyecto fue desarrollado por un equipo de seis personas, incluyéndome, aplicando metodologías ágiles para garantizar un desarrollo eficiente y colaborativo.",
@@ -156,7 +156,7 @@ const projectsData = [
   },
 ];
 
-const filter = [
+export const filterTech = [
   {
     name: 'Javascript',
     image: `${js}`,
@@ -182,3 +182,4 @@ const filter = [
     image: `${express}`,
   },
 ];
+
