@@ -8,6 +8,11 @@ import nodejs from '../assets/Images/Icons/nodejs.png';
 import reactjs from '../assets/Images/Icons/react.png';
 import redux from '../assets/Images/Icons/redux.png';
 import sequelize from '../assets/Images/Icons/sequelize.png';
+import pf from '../assets/Images/PF.png';
+import clima from '../assets/Images/WeatherApp.png';
+import todo from '../assets/Images/todo.png';
+
+
 
 const projectsData = [
   {
@@ -48,7 +53,7 @@ const projectsData = [
       },
     ],
     deployLink: '',
-    image: '',
+    image: `${pf}`,
   },
   {
     title: 'Food API',
@@ -84,7 +89,7 @@ const projectsData = [
   },
   {
     title: 'ToDo List',
-    summary: '',
+    summary: "Aplicación de registro de tareas desarrollada en ReactJS, que emplea conceptos de persistencia de datos mediante localStorage. Permite gestionar tareas, incluyendo la creación, eliminación y marcado como completadas, todo ello gestionado a través de estados.",
     technologies: [
       {
         name: 'Javascript',
@@ -95,7 +100,7 @@ const projectsData = [
         image: `${reactjs}`,
       },
     ],
-    deployLink: '',
+    deployLink: 'https://brayanmen.github.io/TodoList/',
     image: '',
   },
   {
@@ -120,7 +125,7 @@ const projectsData = [
   },
   {
     title: 'Weather App',
-    summary: '',
+    summary: 'Weather App construida con React.js, que implementa conceptos de modularización, llamadas a APIs, pasaje de Props, ciclos de vida y uso de estados.',
     technologies: [
       {
         name: 'Javascript',
@@ -131,12 +136,12 @@ const projectsData = [
         image: `${react}`,
       },
     ],
-    deployLink: '',
-    image: '',
+    deployLink: "https://weather-52j1nztdj-brayanmen.vercel.app/",
+    image: `${clima}`,
   },
   {
     title: 'CV',
-    summary: '',
+    summary: "Curriculum Vitae creado utilizando HTML y CSS para fortalecer mis habilidades en desarrollo web.",
     technologies: [
       {
         name: 'HTML',
@@ -147,7 +152,7 @@ const projectsData = [
         image: `${css}`,
       },
     ],
-    deployLink: '',
+    deployLink: 'https://cv-chi-red.vercel.app/',
     image: '',
   },
 ];
