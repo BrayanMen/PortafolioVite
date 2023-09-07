@@ -5,6 +5,21 @@ import { projectsData, filterTech } from '../Data/projects';
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [filterT, setFilterT] = useState('Todos');
+  const [pages, setPages] = useState(1);
+  const projectPerPage = 3;
+
+  const hanldlerFilter = (fill) => {
+    setFilterT(fill);
+    setPages(1);
+  };
+
+  const filteredProjects =
+    filterT !== 'Todos'
+      ? projectsData.filter((project) =>
+          project.technologies.some((tech) => tech.name === filterT)
+        )
+      : projectsData;
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -16,6 +31,11 @@ export default function Projects() {
     setIsModalOpen(false);
   };
 
+  const lastPage = pages * projectPerPage;
+  const firstPage = lastPage - projectPerPage;
+  const currentProjects = filteredProjects.slice(firstPage, lastPage);
+  const paginate = (pageNumber) => setPages(pageNumber);
+
   return (
     <section id="projects" className={styles.projects}>
       <div>
@@ -23,7 +43,11 @@ export default function Projects() {
         <ul className={styles.ulFilter}>
           {filterTech.map(({ name, image }) => (
             <li key={name} className={styles.liFilter}>
-              <button>
+              <button
+                onClick={() => {
+                  hanldlerFilter(name);
+                }}
+              >
                 {name}
                 {image ? <img src={image} alt="" width={'15px'} /> : ''}
               </button>
@@ -32,7 +56,7 @@ export default function Projects() {
         </ul>
 
         <div>
-          {projectsData?.map((p, index) => (
+          {currentProjects?.map((p, index) => (
             <div key={index}>
               <img src={p.image} alt="" width={'200px'} />
               <h3>{p.title}</h3>
@@ -48,6 +72,19 @@ export default function Projects() {
               </a>
             </div>
           ))}
+          <div >
+            <ul className={styles.pagination}>
+              {Array.from({
+                length: Math.ceil(filteredProjects.length / projectPerPage),
+              }).map((_, index) => (
+                <li key={index}>
+                  <button onClick={() => paginate(index + 1)}>
+                    {index + 1}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {isModalOpen && (
@@ -60,7 +97,8 @@ export default function Projects() {
                   <img src={selectedProject.image} alt="" width={'400px'} />
                   <p>{selectedProject.summary}</p>
                   <p>
-                    Tecnologías:{selectedProject.technologies.map((t) => (
+                    Tecnologías:
+                    {selectedProject.technologies.map((t) => (
                       <img src={t.image} alt="" width={'50px'} />
                     ))}
                   </p>

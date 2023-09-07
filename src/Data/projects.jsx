@@ -181,9 +181,5 @@ export const filterTech = [
     name: 'Node JS',
     image: `${nodejs}`,
   },
-  {
-    name: 'Express JS',
-    image: `${express}`,
-  },
 ];
 
