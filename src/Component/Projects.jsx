@@ -11,9 +11,9 @@ export default function Projects() {
         </h1>
       </div>
       <ul className={styles.ulFilter}>
-        {filterTech.map(({ name }) => (
+        {filterTech.map(({ name,image }) => (
           <li key={name} className={styles.liFilter}>
-            <button>{name}</button>
+            <button>{name}{image?<img src={image} alt="" width={'15px'} />:''}</button>
           </li>
         ))}
       </ul>

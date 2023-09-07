@@ -26,10 +26,16 @@ h1{
   margin: 6px;
   
   button{
+    display: flex;
     padding: 6px;
     font-size: 15px;
     font-weight: 600;
     border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    img{
+      margin-left: 4px;
+    }
     &:hover{
       background-color: #1f3493;
       color: white;
