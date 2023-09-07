@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './Skills.module.scss';
 import antDesign from '../assets/Images/Icons/antdesign.png';
 import bootstrap from '../assets/Images/Icons/bootstrap.png';
@@ -34,8 +34,6 @@ const softSkills = [
 ];
 
 export default function Skills() {
-  ;
-
   return (
     <section id="#skills" className={styles.skills}>
       <h1 className={styles.h1Skill}>Stack Tech:</h1>

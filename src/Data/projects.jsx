@@ -132,7 +132,7 @@ export const projectsData = [
       },
       {
         name: 'React JS',
-        image: `${react}`,
+        image: `${reactjs}`,
       },
     ],
     deployLink: "https://weather-52j1nztdj-brayanmen.vercel.app/",
