@@ -1,23 +1,41 @@
 import React from 'react';
 import styles from './Projects.module.scss';
-import { projectsData, filterTech } from '../Data/projects'
+import { projectsData, filterTech } from '../Data/projects';
 
 export default function Projects() {
   return (
     <section id="projects" className={styles.projects}>
       <div>
-        <h1>
-          Proyectos
-        </h1>
+        <h1>Proyectos</h1>
         <ul className={styles.ulFilter}>
           {filterTech.map(({ name, image }) => (
             <li key={name} className={styles.liFilter}>
-              <button>{name}{image ? <img src={image} alt="" width={'15px'} /> : ''}</button>
+              <button>
+                {name}
+                {image ? <img src={image} alt="" width={'15px'} /> : ''}
+              </button>
             </li>
           ))}
         </ul>
 
+        <div>
+          {projectsData?.map((p, index) => (
+            <div key={index}>
+              <h3>{p.title}</h3>
+              <h4>
+                Tecnologias:
+                {p.technologies.map((t) => (
+                  <img src={t.image} alt="" width={'20px'} />
+                ))}
+              </h4>
+              <img src={p.image} alt="" width={'200px'} />
+              <a href={p.deployLink}>
+                <h4>Link Aqui</h4>
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
-  )
+  );
 }
