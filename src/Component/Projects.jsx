@@ -72,7 +72,7 @@ export default function Projects() {
               </a>
             </div>
           ))}
-          <div >
+          <div>
             <ul className={styles.pagination}>
               {Array.from({
                 length: Math.ceil(filteredProjects.length / projectPerPage),

@@ -10,7 +10,7 @@ import redux from '../assets/Images/Icons/redux.png';
 import sequelize from '../assets/Images/Icons/sequelize.png';
 import pf from '../assets/Images/PF.png';
 import clima from '../assets/Images/WeatherApp.png';
-import todo from '../assets/Images/todo.png';
+import todo from '../assets/Images/todo.jpeg';
 
 
 export const projectsData = [
