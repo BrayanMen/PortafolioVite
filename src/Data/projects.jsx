@@ -8,7 +8,7 @@ import nodejs from '../assets/Images/Icons/nodejs.png';
 import reactjs from '../assets/Images/Icons/react.png';
 import redux from '../assets/Images/Icons/redux.png';
 import sequelize from '../assets/Images/Icons/sequelize.png';
-import pf from '../assets/Images/PF.jpeg';
+import pf from '../assets/Images/PF.jpg';
 import clima from '../assets/Images/WeatherApp.png';
 import todo from '../assets/Images/todo.jpeg';
 
