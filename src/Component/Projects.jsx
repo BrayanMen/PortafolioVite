@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Projects.module.scss';
 import { projectsData, filterTech } from '../Data/projects';
 
 export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    setIsModalOpen(false);
+  };
+
   return (
     <section id="projects" className={styles.projects}>
       <div>
@@ -21,20 +34,40 @@ export default function Projects() {
         <div>
           {projectsData?.map((p, index) => (
             <div key={index}>
-              <h3>{p.title}</h3>
+              <img src={p.image} alt="" width={'200px'} />
+              <h3 onClick={() => openModal(p)}>{p.title}</h3>
               <h4>
                 Tecnologias:
                 {p.technologies.map((t) => (
                   <img src={t.image} alt="" width={'20px'} />
                 ))}
               </h4>
-              <img src={p.image} alt="" width={'200px'} />
               <a href={p.deployLink}>
                 <h4>Link Aqui</h4>
               </a>
             </div>
           ))}
         </div>
+
+        {isModalOpen && (
+          <div>
+            <div className={styles.modal}>
+              <button onClick={closeModal}>Cerrar</button>
+              {selectedProject && (
+                <div>
+                  <h2>{selectedProject.title}</h2>
+                  <p>{selectedProject.summary}</p>
+                  <p>
+                    Tecnologías:{selectedProject.technologies.map((t) => (
+                      <img src={t.image} alt="" width={'50px'} />
+                    ))}
+                  </p>
+                  <a href={selectedProject.deployLink}>Enlace al despliegue</a>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
