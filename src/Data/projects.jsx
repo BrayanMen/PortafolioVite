@@ -158,6 +158,10 @@ export const projectsData = [
 
 export const filterTech = [
   {
+    name: 'Todos',
+    image: ''
+  },
+  {
     name: 'Javascript',
     image: `${js}`,
   },
