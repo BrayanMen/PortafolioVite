@@ -35,7 +35,8 @@ export default function Projects() {
           {projectsData?.map((p, index) => (
             <div key={index}>
               <img src={p.image} alt="" width={'200px'} />
-              <h3 onClick={() => openModal(p)}>{p.title}</h3>
+              <h3>{p.title}</h3>
+              <button onClick={() => openModal(p)}>Info</button>
               <h4>
                 Tecnologias:
                 {p.technologies.map((t) => (
@@ -50,12 +51,13 @@ export default function Projects() {
         </div>
 
         {isModalOpen && (
-          <div>
-            <div className={styles.modal}>
-              <button onClick={closeModal}>Cerrar</button>
+          <div onClick={closeModal}>
+            <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+              <button onClick={closeModal}>x</button>
               {selectedProject && (
                 <div>
                   <h2>{selectedProject.title}</h2>
+                  <img src={selectedProject.image} alt="" width={'400px'} />
                   <p>{selectedProject.summary}</p>
                   <p>
                     Tecnologías:{selectedProject.technologies.map((t) => (
