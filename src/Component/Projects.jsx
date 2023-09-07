@@ -7,17 +7,17 @@ export default function Projects() {
     <section id="projects" className={styles.projects}>
       <div>
         <h1>
-        Proyectos
+          Proyectos
         </h1>
-      </div>
-      <ul className={styles.ulFilter}>
-        {filterTech.map(({ name,image }) => (
-          <li key={name} className={styles.liFilter}>
-            <button>{name}{image?<img src={image} alt="" width={'15px'} />:''}</button>
-          </li>
-        ))}
-      </ul>
+        <ul className={styles.ulFilter}>
+          {filterTech.map(({ name, image }) => (
+            <li key={name} className={styles.liFilter}>
+              <button>{name}{image ? <img src={image} alt="" width={'15px'} /> : ''}</button>
+            </li>
+          ))}
+        </ul>
 
+      </div>
     </section>
   )
 }

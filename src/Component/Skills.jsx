@@ -224,7 +224,7 @@ export default function Skills() {
       </div>
       <div>
         <div className={styles.softDiv}>
-          <h1>Soft Skill:</h1>
+          <h1 className={styles.h1Soft}>Soft Skill:</h1>
           <br />
           <ul className={styles.ulSkills}>
             {softSkills.map((skill, index) => (
