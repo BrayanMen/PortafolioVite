@@ -66,7 +66,7 @@ export default function Projects() {
                 ))}
               </p>
               <a href={p.deployLink}>
-                <h4>Link Aqui</h4>
+                <h4>Enlace</h4>
               </a>
             </div>
           ))}
