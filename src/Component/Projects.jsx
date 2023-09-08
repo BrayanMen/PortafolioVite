@@ -7,7 +7,7 @@ export default function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [filterT, setFilterT] = useState('Todos');
   const [pages, setPages] = useState(1);
-  const projectPerPage = 3;
+  const projectPerPage = 2;
 
   const hanldlerFilter = (fill) => {
     setFilterT(fill);
@@ -55,18 +55,16 @@ export default function Projects() {
           ))}
         </ul>
 
-        <div>
+        <div className={styles.divCards}>
           {currentProjects?.map((p, index) => (
-            <div key={index}>
-              <img src={p.image} alt="" width={'200px'} />
-              <h3>{p.title}</h3>
-              <button onClick={() => openModal(p)}>Info</button>
-              <h4>
-                Tecnologias:
+            <div key={index} className={styles.divCard}>
+              <img className={styles.imgCard} src={p.image} alt="" />
+              <h3 className={styles.titleCard}>{p.title}<button className={styles.btnCard} onClick={() => openModal(p)}>Detalles</button></h3>              
+              <p className={styles.pCard}>
                 {p.technologies.map((t) => (
-                  <img src={t.image} alt="" width={'20px'} />
+                  <img src={t.image} alt="" width={'40px'} />
                 ))}
-              </h4>
+              </p>
               <a href={p.deployLink}>
                 <h4>Link Aqui</h4>
               </a>
