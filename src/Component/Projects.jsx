@@ -65,9 +65,9 @@ export default function Projects() {
                   <img src={t.image} alt="" width={'40px'} />
                 ))}
               </p> */}
-              <a href={p.deployLink}>
+              {/* <a href={p.deployLink}>
                 <h4>Enlace</h4>
-              </a>
+              </a> */}
             </div>
           ))}
           <div>
