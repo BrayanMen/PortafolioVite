@@ -76,7 +76,7 @@ export default function Projects() {
                 length: Math.ceil(filteredProjects.length / projectPerPage),
               }).map((_, index) => (
                 <li key={index}>
-                  <button onClick={() => paginate(index + 1)}>
+                  <button className={styles.btnPagination} onClick={() => paginate(index + 1)}>
                     {index + 1}
                   </button>
                 </li>
