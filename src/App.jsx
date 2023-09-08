@@ -7,7 +7,8 @@ import AboutMe from './Component/AboutMe';
 import Contact from './Component/Contact';
 import Skills from './Component/Skills';
 import Projects from './Component/Projects';
-import Experience from './Component/Experience';
+// import Experience from './Component/Experience';
+import Footer from './Component/Footer';
 
 function App() {
   const handleGoTop = () => {
@@ -30,12 +31,15 @@ function App() {
         <section id="projects">
           <Projects />
         </section>
-        <section id="experience">
+        {/* <section id="experience">
           <Experience />
-        </section>
+        </section> */}
         <section id="contact">
           <Contact />
         </section>
+        <footer id="footer">
+          <Footer/>
+        </footer>
       </div>
     </Router>
   );
