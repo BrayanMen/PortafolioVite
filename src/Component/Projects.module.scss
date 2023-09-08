@@ -47,7 +47,6 @@ h1 {
 .divCards {
   display: flex;
   flex-direction: column;
-
   margin-top: 40px;
   margin-bottom: 20px;
   gap: 10px;
@@ -59,7 +58,7 @@ h1 {
     position: relative;
     width: calc(45% - 10px);
   }
-  
+
   .btnPagination {
     margin-left: 10px;
     padding: 6px;
@@ -72,13 +71,13 @@ h1 {
       color: white;
     }
   }
-  @media(max-width:750px){
+  @media (max-width: 750px) {
     .pagination {
       display: flex;
       flex-direction: row;
       justify-content: center;
       gap: 5px;
-      width: 100%;   
+      width: 100%;
     }
   }
 }
@@ -86,9 +85,9 @@ h1 {
 .divCard {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  align-items: center;
   align-content: center;
   width: calc(45% - 10px);
   padding: 15px;
@@ -98,9 +97,15 @@ h1 {
   background-color: rgba(104, 130, 180, 0.47);
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  .titleCard{
+  .titleCard {
     margin: 10px;
     color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @media (max-width:750px) {
+      display: block;;
+    }
   }
   .imgCard {
     width: 100%;
@@ -118,13 +123,11 @@ h1 {
       color: white;
     }
   }
-  .pCard{
-   gap: 10px;  
-   margin: 10px;
+  .pCard {
+    gap: 10px;
+    margin: 10px;
   }
   @media (max-width: 750px) {
     width: 100%;
   }
 }
-
-

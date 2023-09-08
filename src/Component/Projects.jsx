@@ -60,11 +60,11 @@ export default function Projects() {
             <div key={index} className={styles.divCard}>
               <img className={styles.imgCard} src={p.image} alt="" />
               <h3 className={styles.titleCard}>{p.title}<button className={styles.btnCard} onClick={() => openModal(p)}>Detalles</button></h3>              
-              <p className={styles.pCard}>
+              {/* <p className={styles.pCard}>
                 {p.technologies.map((t) => (
                   <img src={t.image} alt="" width={'40px'} />
                 ))}
-              </p>
+              </p> */}
               <a href={p.deployLink}>
                 <h4>Enlace</h4>
               </a>
