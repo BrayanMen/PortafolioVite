@@ -1,6 +1,39 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 
+const footItems = [
+  {
+    id: 1,
+    name: '',
+    title: 'Inicio',
+  },
+  {
+    id: 2,
+    name: 'about-me',
+    title: 'Sobre mi',
+  },
+  {
+    id: 3,
+    name: 'skills',
+    title: 'Habilidades',
+  },
+  {
+    id: 4,
+    name: 'projects',
+    title: 'Proyectos',
+  },
+  // {
+  //   id: 5,
+  //   name: 'experience',
+  //   title: 'Experiencia',
+  // },
+  {
+    id: 6,
+    name: 'contact',
+    title: 'Contacto',
+  },
+];
+
 export default function Footer() {
   return (
     <div className={styles.containerFooter}>
@@ -34,31 +67,17 @@ export default function Footer() {
         </li>
       </ul>
       <ul className={styles.menu}>
-        <li className={styles.menu__item}>
-          <a className={styles.menu__link} href="#">
-            Inicio
-          </a>
-        </li>
-        <li className={styles.menu__item}>
-          <a className={styles.menu__link} href="#">
-            Sobre Mi
-          </a>
-        </li>
-        <li className={styles.menu__item}>
-          <a className={styles.menu__link} href="#">
-            Habilidades
-          </a>
-        </li>
-        <li className={styles.menu__item}>
-          <a className={styles.menu__link} href="#">
-            Proyectos
-          </a>
-        </li>
-        <li className={styles.menu__item}>
-          <a className={styles.menu__link} href="#">
-            Contacto
-          </a>
-        </li>
+      {footItems.map(({ id, name, title }) => (
+          <li
+            key={id}
+            className={styles.menu__item}>
+            <a 
+            href={`#${name}`}
+            className={styles.menu__link}>
+              {title}
+            </a>
+          </li>
+        ))}
       </ul>
       <p>&copy;2022 Brayan Mendoza | All Rights Reserved</p>
     </footer>

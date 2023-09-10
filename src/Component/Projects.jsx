@@ -1,6 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Projects.module.scss';
 import { projectsData, filterTech } from '../Data/projects';
+import ModalDetail from './ModalDetail/ModalDetail';
+
+const props = {
+  autoPlay: Boolean,
+  showButtons: Boolean
+}
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState([]);
@@ -8,6 +14,34 @@ export default function Projects() {
   const [filterT, setFilterT] = useState('Todos');
   const [pages, setPages] = useState(1);
   const projectPerPage = 2;
+
+  const images = projectsData.map((p)=> p.image)
+  const [slideIndex, setSlideIndex] = useState(0)
+  const [imageSel, setImageSele] = useState(images[0])
+
+  useEffect(() => {
+    if (props.autoPlay || !props.showButtons) {
+      const interval = setInterval(() => {
+        newImage(slideIndex, images)
+      }, 3000);
+      return () => clearInterval(interval)
+    }
+  }, [slideIndex, images, props.autoPlay, props.showButtons])
+
+  const newImage = (index, images, next = true) => {
+    const condition = next ? slideIndex < images.length - 1 : slideIndex > 0;
+    const nextIndex = next ? (condition ? slideIndex + 1 : 0) : condition ? slideIndex - 1 : images.length - 1;
+    setImageSele(images[nextIndex]);
+    setSlideIndex(nextIndex);
+  }
+
+  const previus = () => {
+    newImage(slideIndex, images, false)
+  }
+
+  const next = () => {
+    newImage(slideIndex, images)
+  }
 
   const hanldlerFilter = (fill) => {
     setFilterT(fill);
@@ -17,8 +51,8 @@ export default function Projects() {
   const filteredProjects =
     filterT !== 'Todos'
       ? projectsData.filter((project) =>
-          project.technologies.some((tech) => tech.name === filterT)
-        )
+        project.technologies.some((tech) => tech.name === filterT)
+      )
       : projectsData;
 
   const openModal = (project) => {
@@ -59,7 +93,7 @@ export default function Projects() {
           {currentProjects?.map((p, index) => (
             <div key={index} className={styles.divCard}>
               <img className={styles.imgCard} src={p.image} alt="" />
-              <h3 className={styles.titleCard}>{p.title}<button className={styles.btnCard} onClick={() => openModal(p)}>Detalles</button></h3>              
+              <h3 className={styles.titleCard}>{p.title}<button className={styles.btnCard} onClick={() => openModal(p)}>Detalles</button></h3>
               {/* <p className={styles.pCard}>
                 {p.technologies.map((t) => (
                   <img src={t.image} alt="" width={'40px'} />
@@ -86,30 +120,34 @@ export default function Projects() {
         </div>
 
         {isModalOpen && (
-          <div onClick={closeModal}>
-            <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-              <button onClick={closeModal}>x</button>
-              {selectedProject && (
-                <div>
-                  <h2>{selectedProject.title}</h2>
-                  <img src={selectedProject.image} alt="" width={'400px'} />
-                  <p>{selectedProject.summary}</p>
-                  <p>
-                    Tecnologías:
-                    {selectedProject.technologies.map((t) => (
-                      <img src={t.image} alt="" width={'50px'} />
-                    ))}
-                  </p>
-                  <a href={selectedProject.deployLink}>Enlace al despliegue</a>
-                </div>
-              )}
-            </div>
-          </div>
+          <ModalDetail
+            title="Detalles del Proyecto"
+            selectedProject={selectedProject}
+            closeModal={closeModal}
+            isOpen={isModalOpen}
+          />
         )}
       </div>
-      <div>
-        
+
+      <div className={styles.divCarrosel}>
+      <div className={styles.projectCarrosel}>
+        <img src={imageSel} alt="default" 
+        width='60%' 
+        height='400xp' 
+        className={styles.projectCarroselImg} 
+        autoPlay={true} />
+        <button className='proyeButton' onClick={previus}>{'<'}</button>
+        <button className='proyeButton'onClick={next}>{'>'}</button>
       </div>
+        {/* <div className={styles.projectSlider}>
+          {projectsData.map((p, index) => (
+            <div key={index} className={`project ${index === 0 ? '' : 'hidden'}`}>
+              <img src={p.image} width={'600px'} alt={p.title} />
+            </div>
+          ))}
+        </div> */}
+      </div>
+
     </section>
   );
 }

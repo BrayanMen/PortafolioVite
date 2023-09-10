@@ -27,11 +27,11 @@ const navItems = [
     name: 'projects',
     title: 'Proyectos',
   },
-  {
-    id: 5,
-    name: 'experience',
-    title: 'Experiencia',
-  },
+  // {
+  //   id: 5,
+  //   name: 'experience',
+  //   title: 'Experiencia',
+  // },
   {
     id: 6,
     name: 'contact',
