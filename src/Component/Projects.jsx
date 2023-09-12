@@ -132,10 +132,8 @@ export default function Projects() {
       <div className={styles.divCarrosel}>
       <div className={styles.projectCarrosel}>
         <img src={imageSel} alt="default" 
-        width='60%' 
-        height='400xp' 
         className={styles.projectCarroselImg} 
-        autoPlay={true} />
+        autoPlay={false} />
         <button className='proyeButton' onClick={previus}>{'<'}</button>
         <button className='proyeButton'onClick={next}>{'>'}</button>
       </div>
