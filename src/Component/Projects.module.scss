@@ -52,7 +52,7 @@ h1 {
     transform: translateX(100%);
     .projectCarroselImg{
       transform: translateX(0);  
-      transition: transform 0.5s ease, opacity 0.5s ease;
+      transition: transform 0.5s ease;
     }
   }
 }
