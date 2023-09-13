@@ -45,20 +45,19 @@ h1 {
 }
 
 .divCarrosel {
-  max-height: 600px; 
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  .projectCarrosel{
+    transform: translateX(100%);
+    .projectCarroselImg{
+      transform: translateX(0);  
+      transition: transform 0.5s ease;
+    }
+  }
 }
 
-.projectCarroselImg{
-  transform: translateY(0);
-  opacity: 1;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
 
-.projectCarrosel{
-  transform: translateY(100%);
-  opacity: 0;
-}
 
 .divCards {
   display: flex;
