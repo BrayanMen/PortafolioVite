@@ -12,7 +12,7 @@ import pf from '../assets/Images/PF.jpg';
 import clima from '../assets/Images/WeatherApp.png';
 import todo from '../assets/Images/todo.jpeg';
 import github from '../assets/Images/Icons/github-fill.png';
-import deploy from '../assets/Images/Icons/deploy.png';
+import deploy from '../assets/Images/Icons/console.png';
 
 export const projectsData = [
   {

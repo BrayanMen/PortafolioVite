@@ -36,7 +36,7 @@ export default function ModalDetail({ selectedProject, closeModal, isOpen }) {
               />
             ))}
           </p>
-          <div>
+          <div className={styles.divLink}>
             <a href={selectedProject.deployLink.url} className={styles.deployLink}>
               <img src={selectedProject.deployLink.image} alt="deploy" width={'30px'}/> Deploy
             </a>
