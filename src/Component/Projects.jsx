@@ -158,13 +158,6 @@ export default function Projects() {
             {'>'}
           </button>
         </div>
-        {/* <div className={styles.projectSlider}>
-          {projectsData.map((p, index) => (
-            <div key={index} className={`project ${index === 0 ? '' : 'hidden'}`}>
-              <img src={p.image} width={'600px'} alt={p.title} />
-            </div>
-          ))}
-        </div> */}
       </div>
     </section>
   );

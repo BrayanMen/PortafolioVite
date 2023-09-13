@@ -50,6 +50,9 @@ h1 {
   justify-content: center; 
   .projectCarrosel{
     transform: translateX(100%);
+    @media (max-width:750px) {
+      display: none;
+    }
     .projectCarroselImg{
       transform: translateX(0);  
       transition: transform 0.5s ease;
