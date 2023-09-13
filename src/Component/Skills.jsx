@@ -53,8 +53,7 @@ export default function Skills() {
                       width={'50px'}
                     />
                   </div>
-                </div>
-                65%
+                </div>          
               </div>
               <div className={`${styles.nameSkill}`}>
                 HMTL
@@ -62,8 +61,7 @@ export default function Skills() {
                   <div className={styles.circleInner}>
                     <img src={html} alt="js" width={'50px'} />
                   </div>
-                </div>
-                60%
+                </div>         
               </div>
               <div className={`${styles.nameSkill}`}>
                 CSS
@@ -71,8 +69,7 @@ export default function Skills() {
                   <div className={styles.circleInner}>
                     <img src={css} alt="js" width={'50px'} />
                   </div>
-                </div>
-                60%
+                </div>  
               </div>
               <div className={`${styles.nameSkill}`}>
                 React JS
@@ -81,7 +78,6 @@ export default function Skills() {
                     <img src={reactjs} alt="js" width={'50px'} />
                   </div>
                 </div>
-                65%
               </div>
               <div className={`${styles.nameSkill}`}>
                 Redux
@@ -90,7 +86,6 @@ export default function Skills() {
                     <img src={redux} alt="js" width={'50px'} />
                   </div>
                 </div>
-                50%
               </div>
               <div className={`${styles.nameSkill}`}>
                 AntDesign
@@ -99,7 +94,6 @@ export default function Skills() {
                     <img src={antDesign} alt="js" width={'50px'} />
                   </div>
                 </div>
-                50%
               </div>
               <div className={`${styles.nameSkill}`}>
                 Bootstrap
@@ -108,7 +102,6 @@ export default function Skills() {
                     <img src={bootstrap} alt="js" width={'50px'} />
                   </div>
                 </div>
-                50%
               </div>
               <div className={`${styles.nameSkill}`}>
                 SASS
@@ -117,7 +110,6 @@ export default function Skills() {
                     <img src={sass} alt="sass" width={'50px'} />
                   </div>
                 </div>
-                70%
               </div>
               <div className={`${styles.nameSkill}`}>
                 NodeJS
@@ -126,7 +118,6 @@ export default function Skills() {
                     <img src={nodejs} alt="js" width={'50px'} />
                   </div>
                 </div>
-                65%
               </div>
               <div className={`${styles.nameSkill}`}>
                 ExpressJS
@@ -135,7 +126,6 @@ export default function Skills() {
                     <img src={express} alt="js" width={'50px'} />
                   </div>
                 </div>
-                65%
               </div>
               <div className={`${styles.nameSkill}`}>
                 Sequelize
@@ -144,7 +134,6 @@ export default function Skills() {
                     <img src={sequelize} alt="js" width={'50px'} />
                   </div>
                 </div>
-                70%
               </div>
               <div className={`${styles.nameSkill}`}>
                 MongoDB
@@ -153,7 +142,6 @@ export default function Skills() {
                     <img src={mongoDb} alt="js" width={'50px'} />
                   </div>
                 </div>
-                50%
               </div>
               <div className={`${styles.nameSkill}`}>
                 Firebase
@@ -162,7 +150,6 @@ export default function Skills() {
                     <img src={firebase} alt="js" width={'50px'} />
                   </div>
                 </div>
-                50%
               </div>
               <div className={`${styles.nameSkill}`}>
                 PostgreSQL
@@ -171,7 +158,6 @@ export default function Skills() {
                     <img src={postgre} alt="js" width={'50px'} />
                   </div>
                 </div>
-                70%
               </div>
               <div className={`${styles.nameSkill}`}>
                 Postman
@@ -180,7 +166,6 @@ export default function Skills() {
                     <img src={postman} alt="js" width={'50px'} />
                   </div>
                 </div>
-                80%
               </div>
               <div className={`${styles.nameSkill}`}>
                 Google Cloud
@@ -189,7 +174,6 @@ export default function Skills() {
                     <img src={googlecloud} alt="js" width={'50px'} />
                   </div>
                 </div>
-                50%
               </div>
               <div className={`${styles.nameSkill}`}>
                 Wordpress
@@ -198,7 +182,6 @@ export default function Skills() {
                     <img src={wordpress} alt="js" width={'50px'} />
                   </div>
                 </div>
-                55%
               </div>
               <div className={`${styles.nameSkill}`}>
                 Git
@@ -207,7 +190,6 @@ export default function Skills() {
                     <img src={git} alt="js" width={'50px'} />
                   </div>
                 </div>
-                70%
               </div>
               <div className={`${styles.nameSkill}`}>
                 Slack
@@ -216,7 +198,6 @@ export default function Skills() {
                     <img src={slack} alt="js" width={'50px'} />
                   </div>
                 </div>
-                100%
               </div>
             </div>
           </div>
