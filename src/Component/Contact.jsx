@@ -55,16 +55,21 @@ function Contact() {
           <h1>Informacion de Contacto</h1>
           <div>
             <strong>Ponte en contacto conmigo</strong>
-          </div>
-          <div>
-            <img src={phone} alt="phone" width={'30px'} />
-            <span>(54) 9 11 2730 0038</span>
-          </div>
-          <div>
-            <img src={mail} alt="Mail" width={'30px'} />
-            <span>
-              <a href="mailto:brayanjmr880@gmail.com">brayanjmr880@gmail.com</a>
-            </span>
+
+            <div className={styles.contactContainerInfo}>
+              <div className={styles.contactCardsInfo}>
+                <img src={phone} alt="phone" width={'30px'} />
+                <a href='https://wa.me/5491127300038'>(54) 9 11 2730 0038</a>
+              </div>
+              <div className={styles.contactCardsInfo}>
+                <img src={mail} alt="Mail" width={'30px'} />
+                <span>
+                  <a href="mailto:brayanjmr880@gmail.com">
+                    brayanjmr880@gmail.com
+                  </a>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
