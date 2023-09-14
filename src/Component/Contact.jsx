@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Contact.module.scss';
+import mail from '../assets/Images/Icons/mail.png'
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -52,16 +54,17 @@ function Contact() {
         <div className={styles.contactInfo}>
           <h1>Informacion de Contacto</h1>
           <div>
+            <strong>Ponte en contacto conmigo</strong>
+          </div>
+          <div>
             <i></i>
             <span>(54) 9 11 2730 0038</span>
           </div>
           <div>
-            <i></i>
-            <span><a href="mailto:brayanjmr880@gmail.com">brayanjmr880@gmail.com</a></span>
-          </div>
-          <div>
-            <i></i>
-            <span></span>
+            <img src={mail} alt='Mail' width={'30px'}/>
+            <span>
+              <a href="mailto:brayanjmr880@gmail.com">brayanjmr880@gmail.com</a>
+            </span>
           </div>
         </div>
       </div>
