@@ -80,7 +80,7 @@ export default function AboutMe() {
               <li className={styles.aboutItem}>
                 <strong>Direccion:</strong> Buenos Aires, Avellaneda.
               </li>
-              <li className={styles.aboutItem}>
+              {/* <li className={styles.aboutItem}>
                 <strong>Telefono:</strong> +54 9 11 2730 0038
               </li>
               <li className={styles.aboutItem}>
@@ -89,7 +89,7 @@ export default function AboutMe() {
                   {' '}
                   brayanjmr880@gmail.com
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

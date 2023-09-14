@@ -5,49 +5,65 @@ function Contact() {
   const [formData, setFormData] = useState({
     nombre: '',
     correo: '',
-    asunto:'',
-    mensaje:'',
-  })
+    asunto: '',
+    mensaje: '',
+  });
 
-  const handleChangeForm = (e)=>{
-    const {name, value} = e.target;
+  const handleChangeForm = (e) => {
+    const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value
-    })
-    )
-  }
+      [name]: value,
+    }));
+  };
 
-  const handleSubmitForm = ()=>{
+  const handleSubmitForm = () => {
     setFormData({
       nombre: formData.nombre,
       correo: formData.correo,
       asunto: formData.asunto,
       mensaje: formData.mensaje,
     });
-  }
+  };
   return (
-    <section id="contact" className={styles.divContact}>
-      <div>
-        <form>
-          <h1>Contacto</h1>
+    <section id="contact" className={styles.sectContact}>
+      <div className={styles.contactCard}>
+        <div className={styles.contactForm}>
+          <h1>Contactame</h1>
+          <form>
+            <div>
+              <label htmlFor="correo">Correo</label>
+              <input type="email" />
+            </div>
+            <div>
+              <label htmlFor="nombre">Nombre:</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label htmlFor="asunto">Asunto:</label>
+              <input type="text" />
+            </div>
+            <div>
+              <label htmlFor="mensaje">Mensaje:</label>
+              <input type="text" />
+            </div>
+          </form>
+        </div>
+        <div className={styles.contactInfo}>
+          <h1>Informacion de Contacto</h1>
           <div>
-            <label htmlFor="correo">Correo</label>
-            <input type="email" />
+            <i></i>
+            <span>(54) 9 11 2730 0038</span>
           </div>
           <div>
-            <label htmlFor="nombre">Nombre:</label>
-            <input type="text" />
+            <i></i>
+            <span><a href="mailto:brayanjmr880@gmail.com">brayanjmr880@gmail.com</a></span>
           </div>
           <div>
-            <label htmlFor="asunto">Asunto:</label>
-            <input type="text" />
+            <i></i>
+            <span></span>
           </div>
-          <div>
-            <label htmlFor="mensaje">Mensaje:</label>
-            <input type="text" />
-          </div>
-        </form>
+        </div>
       </div>
     </section>
   );
