@@ -29,7 +29,7 @@
 .contactInfo {
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .contactCard {
     display: flex;
     flex-direction: column;
@@ -45,11 +45,12 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      align-content: center;
       background-color: rgba(104, 130, 180, 0.47);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.555);
-      margin: 5px;
+      margin: 10px 5px 5px 5px;
       border: 1px solid rgba(255, 255, 255, 0.247);
-      border-radius: 999px;
+      border-radius: 40px;
       padding: 12px;
     }
   }
