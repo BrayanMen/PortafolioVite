@@ -11,17 +11,22 @@
 
 .contactCard {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
   padding: 20px;
-  width: calc(50% - 10px);
   height: auto;
   color: #fff;
 }
 
 .contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
   background-color:  rgba(0,0,0,.5);
   padding: 15px;
-  border-radius: 20px;
+  border-radius:0 20px 20px 0;
   .inputBox {
     position: relative;
     input,
@@ -58,8 +63,18 @@
     }
   }
 }
+.contactInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: rgba(104, 130, 180, 0.47);
+  padding: 15px;
+  border-radius:20px 0 0 20px;
+}
 
-@media (max-width: 750px) {
+@media (max-width: 880px) {
   .contactCard {
     display: flex;
     flex-direction: column;
@@ -67,10 +82,14 @@
     justify-content: center;
     width: 100%;
   }
+  .contactForm{
+    border-radius: 20px;
+  }
   .contactInfo {
     margin-top: 20px;
     border: 1px solid rgba(255, 255, 255, 0.247);
     border-radius: 20px;
+    background-color: transparent;
     font-size: 40px;
     .contactContainerInfo {
       display: flex;
