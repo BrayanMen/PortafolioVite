@@ -84,8 +84,11 @@
   }
   .contactForm{
     border-radius: 20px;
+    width: 100%;
   }
   .contactInfo {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
     border: 1px solid rgba(255, 255, 255, 0.247);
     border-radius: 20px;
