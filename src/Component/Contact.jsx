@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Contact.module.scss';
 import mail from '../assets/Images/Icons/mail.png';
-import phone from '../assets/Images/Icons/phone.png';
+import phone from '../assets/Images/Icons/whatsapp-icon.png';
 
 function Contact() {
   const [formData, setFormData] = useState({
