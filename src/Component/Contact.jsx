@@ -31,8 +31,8 @@ function Contact() {
     <section id="contact" className={styles.sectContact}>
       <div className={styles.contactCard}>
         <div className={styles.contactForm}>
-          <h1>Contactame</h1>
-          <form>
+          <form >
+            <h1 className={styles['h1FormInfo']}>Contactame</h1>
             <div className={styles['inputBox']}>
               <input type="text" />
               <label htmlFor="nombre">Nombre Completo:</label>
@@ -52,19 +52,24 @@ function Contact() {
           </form>
         </div>
         <div className={styles.contactInfo}>
-          <h1>Informacion de Contacto</h1>
           <div>
-
+            <h1 className={styles['h1FormInfo']}>Informacion de Contacto</h1>
             <div className={styles.contactContainerInfo}>
-            <strong>Ponte en contacto conmigo</strong>
+              <strong>Ponte en contacto conmigo</strong>
               <div className={styles.contactCardsInfo}>
-                <a href="mailto:brayanjmr880@gmail.com" className={styles.tCardsInfoA}>
+                <a
+                  href="mailto:brayanjmr880@gmail.com"
+                  className={styles.tCardsInfoA}
+                >
                   <img src={mail} alt="Mail" width={'30px'} />
                 </a>
                 <span>brayanjmr880@gmail.com</span>
               </div>
               <div className={styles.contactCardsInfo}>
-                <a href="https://wa.me/5491127300038" className={styles.tCardsInfoA}>
+                <a
+                  href="https://wa.me/5491127300038"
+                  className={styles.tCardsInfoA}
+                >
                   <img src={phone} alt="phone" width={'30px'} />
                 </a>
                 <p>+(54) 9 11 2730-0038</p>
