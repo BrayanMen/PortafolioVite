@@ -33,21 +33,21 @@ function Contact() {
         <div className={styles.contactForm}>
           <h1>Contactame</h1>
           <form>
-            <div>
-              <label htmlFor="nombre">Nombre:</label>
+            <div className={styles['inputBox']}>
               <input type="text" />
+              <label htmlFor="nombre">Nombre Completo:</label>
             </div>
-            <div>
-              <label htmlFor="correo">Correo</label>
+            <div className={styles['inputBox']}>
               <input type="email" />
+              <label htmlFor="correo">Correo:</label>
             </div>
-            <div>
+            <div className={styles['inputBox']}>
+              <input type="text" />
               <label htmlFor="asunto">Asunto:</label>
-              <input type="text" />
             </div>
-            <div>
+            <div className={styles['inputBox']}>
+              <textarea cols="30" rows="8"></textarea>
               <label htmlFor="mensaje">Mensaje:</label>
-              <input type="text" />
             </div>
           </form>
         </div>
