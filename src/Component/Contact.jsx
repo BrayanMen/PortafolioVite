@@ -34,12 +34,12 @@ function Contact() {
           <h1>Contactame</h1>
           <form>
             <div>
-              <label htmlFor="correo">Correo</label>
-              <input type="email" />
-            </div>
-            <div>
               <label htmlFor="nombre">Nombre:</label>
               <input type="text" />
+            </div>
+            <div>
+              <label htmlFor="correo">Correo</label>
+              <input type="email" />
             </div>
             <div>
               <label htmlFor="asunto">Asunto:</label>
@@ -58,16 +58,16 @@ function Contact() {
 
             <div className={styles.contactContainerInfo}>
               <div className={styles.contactCardsInfo}>
-                <img src={phone} alt="phone" width={'30px'} />
-                <a href='https://wa.me/5491127300038'>(54) 9 11 2730 0038</a>
+                <a href="https://wa.me/5491127300038">
+                  <img src={phone} alt="phone" width={'30px'} />
+                </a>
+                <span>+(54) 9 11 2730 0038</span>
               </div>
               <div className={styles.contactCardsInfo}>
-                <img src={mail} alt="Mail" width={'30px'} />
-                <span>
-                  <a href="mailto:brayanjmr880@gmail.com">
-                    brayanjmr880@gmail.com
-                  </a>
-                </span>
+                <a href="mailto:brayanjmr880@gmail.com">
+                  <img src={mail} alt="Mail" width={'30px'} />
+                </a>
+                <span>brayanjmr880@gmail.com</span>
               </div>
             </div>
           </div>
