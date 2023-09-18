@@ -1,7 +1,7 @@
 .aboutContainer {
   transition: background-color 0.3s, color 0.3s;
   background: linear-gradient(to bottom, rgb(118, 118, 118), #1f3493);
-  padding: 20px;
+  padding: 75px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -16,8 +16,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  
-  margin: 20px;
   @media (max-width:750px) {
     background-size: 600px;;
   }
