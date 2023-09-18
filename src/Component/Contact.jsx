@@ -34,19 +34,19 @@ function Contact() {
           <form>
             <h1 className={styles['h1FormInfo']}>Contactame</h1>
             <div className={styles['inputBox']}>
-              <input type="text" />
+              <input type="text" required />
               <label htmlFor="nombre">Nombre Completo:</label>
             </div>
             <div className={styles['inputBox']}>
-              <input type="email" />
+              <input type="email" required />
               <label htmlFor="correo">Correo:</label>
             </div>
             <div className={styles['inputBox']}>
-              <input type="text" />
+              <input type="text" required />
               <label htmlFor="asunto">Asunto:</label>
             </div>
             <div className={styles['inputBox']}>
-              <textarea cols="30" rows="8"></textarea>
+              <textarea cols="30" rows="8" required ></textarea>
               <label htmlFor="mensaje">Mensaje:</label>
             </div>
             <div className={styles['divSubmit']}>
