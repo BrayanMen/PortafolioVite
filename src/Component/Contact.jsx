@@ -31,7 +31,7 @@ function Contact() {
     <section id="contact" className={styles.sectContact}>
       <div className={styles.contactCard}>
         <div className={styles.contactForm}>
-          <form >
+          <form>
             <h1 className={styles['h1FormInfo']}>Contactame</h1>
             <div className={styles['inputBox']}>
               <input type="text" />
@@ -48,6 +48,9 @@ function Contact() {
             <div className={styles['inputBox']}>
               <textarea cols="30" rows="8"></textarea>
               <label htmlFor="mensaje">Mensaje:</label>
+            </div>
+            <div className={styles['divSubmit']}>
+              <input className={styles['inputSubmit']} type="submit" value="Enviar" />
             </div>
           </form>
         </div>
