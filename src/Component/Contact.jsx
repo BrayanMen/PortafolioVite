@@ -7,12 +7,18 @@ import emailjs from '@emailjs/browser';
 function Contact() {
   const formEmail = useRef();
 
+  const [formStatus, setFormStatus] = useState(null);
   const [formData, setFormData] = useState({
     nombre: '',
     correo: '',
     asunto: '',
     mensaje: '',
   });
+
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return regex.test(email);
+  };
 
   const handleChangeForm = (e) => {
     const { name, value } = e.target;
@@ -24,20 +30,31 @@ function Contact() {
 
   const handleSubmitForm = (e) => {
     e.preventDefault();
+    if (!validateEmail(formData.correo)) {
+      setFormStatus('Por favor, ingrese un correo electrónico válido.');
+      return;
+    }
     console.log(formEmail);
     const serviceId = 'service_iuw0seb';
     const templateId = 'template_f3l7gme';
     const apikey = '0cVPQqj-PG7k2HuBf';
     emailjs
       .sendForm(serviceId, templateId, formEmail.current, apikey)
-      .then((resultado) => console.log(resultado.text))
-      .catch((error) => console.log(error));
-    setFormData({
-      nombre: formData.nombre,
-      correo: formData.correo,
-      asunto: formData.asunto,
-      mensaje: formData.mensaje,
-    });
+      .then((r) => {
+        setFormStatus(
+          'El formulario se envió con éxito. Gracias por contactarnos.'
+        );
+        setFormData({
+          nombre: '',
+          correo: '',
+          asunto: '',
+          mensaje: '',
+        });
+      })
+      .catch((error) => {
+        setFormStatus('Hubo un problema al enviar el formulario. Por favor, inténtelo de nuevo más tarde.');
+        console.log(error);
+      });
   };
   return (
     <section id="contact" className={styles.sectContact}>
