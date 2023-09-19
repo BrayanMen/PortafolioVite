@@ -62,6 +62,8 @@ function Contact() {
         <div className={styles.contactForm}>
           <form ref={formEmail} onSubmit={handleSubmitForm}>
             <h1 className={styles['h1FormInfo']}>Contactame</h1>
+            {formStatus && <div className={styles.formStatus}><h4>{formStatus}</h4></div>}
+            <br/>
             <div className={styles['inputBox']}>
               <input
                 type="text"
