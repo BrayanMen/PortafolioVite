@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './Contact.module.scss';
 import mail from '../assets/Images/Icons/mail.png';
 import phone from '../assets/Images/Icons/whatsapp-icon.png';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const formEmail = useRef();
+
   const [formData, setFormData] = useState({
     nombre: '',
     correo: '',
@@ -19,7 +22,16 @@ function Contact() {
     }));
   };
 
-  const handleSubmitForm = () => {
+  const handleSubmitForm = (e) => {
+    e.preventDefault();
+    console.log(formEmail);
+    const serviceId = 'service_iuw0seb';
+    const templateId = 'template_f3l7gme';
+    const apikey = '0cVPQqj-PG7k2HuBf';
+    emailjs
+      .sendForm(serviceId, templateId, formEmail.current, apikey)
+      .then((resultado) => console.log(resultado.text))
+      .catch((error) => console.log(error));
     setFormData({
       nombre: formData.nombre,
       correo: formData.correo,
@@ -31,26 +43,55 @@ function Contact() {
     <section id="contact" className={styles.sectContact}>
       <div className={styles.contactCard}>
         <div className={styles.contactForm}>
-          <form>
+          <form ref={formEmail} onSubmit={handleSubmitForm}>
             <h1 className={styles['h1FormInfo']}>Contactame</h1>
             <div className={styles['inputBox']}>
-              <input type="text" required />
+              <input
+                type="text"
+                name="nombre"
+                value={formData.nombre}
+                onChange={handleChangeForm}
+                required
+              />
               <label htmlFor="nombre">Nombre Completo:</label>
             </div>
             <div className={styles['inputBox']}>
-              <input type="email" required />
+              <input
+                type="email"
+                name="correo"
+                value={formData.correo}
+                onChange={handleChangeForm}
+                required
+              />
               <label htmlFor="correo">Correo:</label>
             </div>
             <div className={styles['inputBox']}>
-              <input type="text" required />
+              <input
+                type="text"
+                name="asunto"
+                value={formData.asunto}
+                onChange={handleChangeForm}
+                required
+              />
               <label htmlFor="asunto">Asunto:</label>
             </div>
             <div className={styles['inputBox']}>
-              <textarea cols="30" rows="8" required ></textarea>
+              <textarea
+                cols="30"
+                rows="8"
+                name="mensaje"
+                value={formData.mensaje}
+                onChange={handleChangeForm}
+                required
+              ></textarea>
               <label htmlFor="mensaje">Mensaje:</label>
             </div>
             <div className={styles['divSubmit']}>
-              <input className={styles['inputSubmit']} type="submit" value="Enviar" />
+              <input
+                className={styles['inputSubmit']}
+                type="submit"
+                value="Enviar"
+              />
             </div>
           </form>
         </div>
