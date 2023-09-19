@@ -30,14 +30,17 @@
   padding: 15px;
   border-radius: 0 20px 20px 0;
   .divSubmit{
+   display: flex;
+   align-items: center;
+   justify-content: center;
     .inputSubmit{
       padding: 5px 12px;
       border-radius: 20px;
       font-size: 15px;
       font-weight: 700;
       &:hover{
-        background-color: yellowgreen;
-        color: tomato;
+        background-color: rgba(104, 130, 180, 0.47);
+        color: rgb(255, 252, 251);
       }
     }
   }
