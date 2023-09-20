@@ -66,7 +66,7 @@ export default function Footer() {
           </a>
         </li>
       </ul>
-      <ul className={styles.menu}>
+      {/* <ul className={styles.menu}>
       {footItems.map(({ id, name, title }) => (
           <li
             key={id}
@@ -78,7 +78,7 @@ export default function Footer() {
             </a>
           </li>
         ))}
-      </ul>
+      </ul> */}
       <p>&copy;2022 Brayan Mendoza | All Rights Reserved</p>
     </footer>
     </div>
