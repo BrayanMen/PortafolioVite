@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styles from './App.module.scss';
 import Home from './Component/Home';
@@ -11,13 +11,34 @@ import Projects from './Component/Projects';
 import Footer from './Component/Footer';
 
 function App() {
+  const [showGoTopButton, setShowGoTopButton] = useState(false);
+
   const handleGoTop = () => {
     window.scrollTo(0, 0);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setShowGoTopButton(true);
+      } else {
+        setShowGoTopButton(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
+          {showGoTopButton && (
+            <button className={styles.goToTopButton} onClick={handleGoTop}>
+              ^
+            </button>
+          )}  
       <div className="">
         <section id="">
           <Home />
@@ -38,7 +59,7 @@ function App() {
           <Contact />
         </section>
         <footer id="footer">
-          <Footer/>
+          <Footer />
         </footer>
       </div>
     </Router>

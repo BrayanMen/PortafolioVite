@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Navbar.module.scss';
 import ToggleIcon from '../assets/Images/toggleIcon';
 import git from '../assets/Images/Icons/github-fill.png';
@@ -40,8 +40,26 @@ const navItems = [
 
 function Navbar() {
   const [menuActive, setMenuActive] = useState(false);
-  // const location = useLocation();
   const [activeLink, setActiveLink] = useState(''); 
+  // const [showGoTopButton, setShowGoTopButton] = useState(false);
+
+  // const handleGoTop = () => {
+  //   window.scrollTo(0, 0);
+  // };
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 500) {
+  //       setShowGoTopButton(true);
+  //     } else {
+  //       setShowGoTopButton(false);
+  //     }
+  //   };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   const handleNavLinkClick = (link) => {
     setActiveLink(link);
@@ -83,6 +101,9 @@ function Navbar() {
         <a href='https://www.linkedin.com/in/brayan-mendoza-52625a160'><img src={linked} alt="Linkdn" width={'40px'}/></a>
         <a href="mailto:brayanjmr880@gmail.com"><img src={mail} alt="Mail" width={'30px'}/></a>
       </div>
+      {/* {showGoTopButton && (
+            <button className={styles.goToTopButton} onClick={handleGoTop}>^</button>
+          )} */}
     </nav>
   );
 }
