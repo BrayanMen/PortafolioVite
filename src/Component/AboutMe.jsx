@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styles from './AboutMe.module.scss';
+import kickbox from '../assets/Images/Icons/kickboxing.png';
+import read from '../assets/Images/Icons/read.png';
+import paint from '../assets/Images/Icons/paint.png';
+import tv from '../assets/Images/Icons/tv.png';
 
 export default function AboutMe() {
   const [age, setAge] = useState(0);
@@ -50,10 +54,7 @@ export default function AboutMe() {
   return (
     <section className={styles.aboutContainer} id="about-me">
       <div className={styles.divI}>
-        <div>
-          <div>
-            <img></img>
-          </div>
+        <div className={styles.aboutDivContainer}>
           <div className={styles.divAbout}>
             <h1 className="titleAbout">Sobre mi:</h1>
             <p className="pAbput">
@@ -91,33 +92,35 @@ export default function AboutMe() {
             </ul>
           </div>
         </div>
+      <div className={styles.containerHobbies}>
+        <h2>Hobbies:</h2>
+        <div className={styles.divHobbies}>
+          <div className={styles.divHobbie}>
+            <h3>Artes Marciales</h3>
+            <div>
+              <img src={kickbox} alt="arteMarcial" width="60px" />
+            </div>
+          </div>
+          <div className={styles.divHobbie}>
+            <h3>Ilustrar</h3>
+            <div>
+              <img src={paint} alt="paint" width="60px" />
+            </div>
+          </div>
+          <div className={styles.divHobbie}>
+            <h3>Leer</h3>
+            <div>
+              <img src={read} alt="read" width="60px" />
+            </div>
+          </div>
+          <div className={styles.divHobbie}>
+            <h3>Ver Series</h3>
+            <div>
+              <img src={tv} alt="watchTv" width="60px" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-          <h2>Hobbies:</h2>
-        <div>
-          <h3>Artes Marciales</h3>
-          <div>
-            <img src="" alt=""/>
-          </div>
-        </div>
-        <div>
-          <h3>Ilustrar</h3>
-          <div>
-            <img src="" alt=""/>
-          </div>
-        </div>
-        <div>
-          <h3>Leer</h3>
-          <div>
-            <img src="" alt=""/>
-          </div>
-        </div>
-        <div>
-          <h3>Ver Series</h3>
-          <div>
-            <img src="" alt=""/>
-          </div>
-        </div>
       </div>
     </section>
   );

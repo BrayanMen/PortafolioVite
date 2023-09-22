@@ -9,18 +9,56 @@
   justify-content: center;
   width: 100%;
   height: auto;
-   @media (max-width:750px){
-     padding: 0;
-   }
+  @media (max-width: 750px) {
+    padding: 0;
+  }
 }
-.divI{
+
+.containerHobbies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  color: white;
+  .divHobbies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    .divHobbie {
+      display: flex;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.555);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 5px;
+      border: 2px solid #f4f4f477;
+      border-radius: 8px;
+      background-color: #f4f4f480;
+      width: 130px;
+      height: 130px;
+      bottom: 0;
+    }
+  }
+}
+
+.divI {
   background-image: url('../assets/Images/nnneon.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  @media (max-width:750px) {
-    background-size: 600px;;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 750px) {
+    background-size: 600px;
   }
 }
 .divAbout {
@@ -96,8 +134,8 @@
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  &:link:any-link{
-  color: white;
+  &:link:any-link {
+    color: white;
   }
   @media (max-width: 1000px) {
     align-items: center;
