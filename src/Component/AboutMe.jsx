@@ -5,8 +5,6 @@ export default function AboutMe() {
   const [age, setAge] = useState(0);
   const [programming, setProgramming] = useState(0);
 
-
-
   const birthDate = new Date(1995, 4, 8);
   const calculateAge = () => {
     const date = new Date();
@@ -91,6 +89,33 @@ export default function AboutMe() {
                 </a>
               </li> */}
             </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+          <h2>Hobbies:</h2>
+        <div>
+          <h3>Artes Marciales</h3>
+          <div>
+            <img src="" alt=""/>
+          </div>
+        </div>
+        <div>
+          <h3>Ilustrar</h3>
+          <div>
+            <img src="" alt=""/>
+          </div>
+        </div>
+        <div>
+          <h3>Leer</h3>
+          <div>
+            <img src="" alt=""/>
+          </div>
+        </div>
+        <div>
+          <h3>Ver Series</h3>
+          <div>
+            <img src="" alt=""/>
           </div>
         </div>
       </div>
