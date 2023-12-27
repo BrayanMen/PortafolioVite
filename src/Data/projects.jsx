@@ -11,6 +11,7 @@ import sequelize from '../assets/Images/Icons/sequelize.png';
 import pf from '../assets/Images/PF.jpg';
 import clima from '../assets/Images/WeatherApp.png';
 import todo from '../assets/Images/todo.jpeg';
+import CVHTML from '../assets/Images/cvpage.jpeg';
 import github from '../assets/Images/Icons/github-fill.png';
 import deploy from '../assets/Images/Icons/console.png';
 
@@ -199,7 +200,7 @@ export const projectsData = [
       url:  'https://github.com/BrayanMen/cv',
       image: `${github}`,
     },
-    image: '',
+    image:`${CVHTML}`,
   },
 ];
 
