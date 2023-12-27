@@ -36,7 +36,7 @@ const softSkills = [
 export default function Skills() {
   return (
     <section id="#skills" className={styles.skills}>
-      <h1 className={styles.h1Skill}>Stack Tech:</h1>
+      <h1 className={styles.h1Skill}>Tecnologias:</h1>
       <div className={styles.skiDiv}>
         <div>
         <div>
@@ -205,7 +205,7 @@ export default function Skills() {
       </div>
       <div>
         <div className={styles.softDiv}>
-          <h1 className={styles.h1Soft}>Soft Skill:</h1>
+          <h1 className={styles.h1Soft}>Habilidades Blandas:</h1>
           <br />
           <ul className={styles.ulSkills}>
             {softSkills.map((skill, index) => (
