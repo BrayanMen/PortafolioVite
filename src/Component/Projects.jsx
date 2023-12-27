@@ -64,6 +64,8 @@ export default function Projects() {
 
         <div className={styles.divCards}>
           {currentProjects?.map((p, index) => (
+            <>
+            { p.image !== "" && (           
             <div key={index} className={styles.divCard}>
               <img className={styles.imgCard} src={p.image} alt="" />
               <h3 className={styles.titleCard}>
@@ -72,7 +74,9 @@ export default function Projects() {
                   Detalles
                 </button>
               </h3>
-            </div>
+              </div>
+              )}
+              </>
           ))}
         </div>
         <div>
