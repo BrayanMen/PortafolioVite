@@ -11,6 +11,7 @@ import sequelize from '../assets/Images/Icons/sequelize.png';
 import pf from '../assets/Images/PF.jpg';
 import clima from '../assets/Images/WeatherApp.png';
 import todo from '../assets/Images/todo.jpeg';
+import riders from '../assets/Images/RidersCafe.jpeg';
 import CVHTML from '../assets/Images/cvpage.jpeg';
 import github from '../assets/Images/Icons/github-fill.png';
 import deploy from '../assets/Images/Icons/console.png';
@@ -179,9 +180,9 @@ export const projectsData = [
     image: `${clima}`,
   },
   {
-    title: 'CV',
+    title: 'Riders Garage Cafe',
     summary:
-      'Curriculum Vitae creado utilizando HTML y CSS para fortalecer mis habilidades en desarrollo web.',
+      'Landing Page utilizando HTML, CSS y JS para Cursos de Talent Tech del GCBA para reforzar mis habilidades en desarrollo web y seguir sumando conocimientos.',
     technologies: [
       {
         name: 'HTML',
@@ -191,16 +192,20 @@ export const projectsData = [
         name: 'CSS',
         image: `${css}`,
       },
+      {
+        name: 'Javascript',
+        image: `${js}`,
+      },
     ],
     deployLink: {
-      url: 'https://cv-chi-red.vercel.app/',
+      url: 'https://riderscafegarage.vercel.app/',
       image: `${deploy}`,
     },
     githubLink: {
-      url:  'https://github.com/BrayanMen/cv',
+      url:  'https://github.com/BrayanMen/Talento-Tech',
       image: `${github}`,
     },
-    image:`${CVHTML}`,
+    image:`${riders}`,
   },
 ];
 
